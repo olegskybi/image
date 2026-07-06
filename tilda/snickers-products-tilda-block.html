@@ -52,6 +52,13 @@
 
       <article class="sn-products__card">
         <div class="sn-products__halo">
+          <img class="sn-products__image" src="https://raw.githubusercontent.com/olegskybi/image/main/assets/mondelez-products/twix-xtra-82.png" alt="Шоколадный батончик Twix Экстра 82г" loading="lazy" decoding="async">
+        </div>
+        <h3 class="sn-products__title">Шоколадный<br>батончик Twix Xtra<br>82г.</h3>
+      </article>
+
+      <article class="sn-products__card">
+        <div class="sn-products__halo">
           <img class="sn-products__image" src="https://raw.githubusercontent.com/olegskybi/image/main/assets/mondelez-products/twix-xtra-salted-caramel-82.png" alt="Шоколадный батончик Twix Xtra Соленая Карамель 82г" loading="lazy" decoding="async">
         </div>
         <h3 class="sn-products__title">Шоколадный<br>батончик Twix Xtra<br>Соленая Карамель 82г.</h3>
@@ -155,21 +162,20 @@
     width: 100%;
     aspect-ratio: 1;
     margin: 0 auto clamp(28px, 2vw, 34px);
-    border-radius: 50%;
-    background:
-      radial-gradient(circle at 50% 48%, rgba(84, 28, 15, 0.98) 0%, rgba(67, 20, 10, 0.92) 58%, rgba(53, 14, 7, 0.65) 100%);
+    border-radius: 0;
+    background: transparent;
   }
 
   .sn-products__image {
     display: block;
-    width: 116%;
+    width: 100%;
     max-width: none;
     height: auto;
     user-select: none;
     -webkit-user-drag: none;
-    transform: rotate(-14deg) translateY(1px);
+    transform: none;
     transform-origin: 50% 50%;
-    filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.25));
+    filter: none;
   }
 
   .sn-products__title {
@@ -279,7 +285,7 @@
     }
 
     .sn-products__image {
-      width: 118%;
+      width: 100%;
     }
 
     .sn-products__title {
