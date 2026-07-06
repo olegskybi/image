@@ -13,6 +13,7 @@
       </article>
     </div>
   </div>
+  <div class="sn-weekly-prizes__dots" aria-hidden="true"></div>
 </section>
 
 <style>
@@ -82,6 +83,35 @@
     -webkit-user-drag: none;
   }
 
+  .sn-weekly-prizes__dots {
+    display: flex;
+    width: fit-content;
+    max-width: calc(100% - 32px);
+    margin: clamp(18px, 2.4vw, 28px) auto 0;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .sn-weekly-prizes__dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    flex: 0 0 12px;
+    border-radius: 999px;
+    background: #ffffff;
+    opacity: 1;
+    transform: translateZ(0);
+    transition: width 0.34s ease, flex-basis 0.34s ease, opacity 0.34s ease;
+  }
+
+  .sn-weekly-prizes__dot.is-active {
+    width: 36px;
+    flex-basis: 36px;
+  }
+
   @media (max-width: 768px) {
     .sn-weekly-prizes {
       --sn-card-gap: 12px;
@@ -96,6 +126,22 @@
 
     .sn-weekly-prizes__track {
       padding: 0 var(--sn-side-pad);
+    }
+
+    .sn-weekly-prizes__dots {
+      gap: 11px;
+      margin-top: 18px;
+    }
+
+    .sn-weekly-prizes__dot {
+      width: 10px;
+      height: 10px;
+      flex-basis: 10px;
+    }
+
+    .sn-weekly-prizes__dot.is-active {
+      width: 32px;
+      flex-basis: 32px;
     }
   }
 
@@ -116,11 +162,27 @@
 
       var viewport = root.querySelector(".sn-weekly-prizes__viewport");
       var track = root.querySelector(".sn-weekly-prizes__track");
+      var dotsRoot = root.querySelector(".sn-weekly-prizes__dots");
 
       if (!viewport || !track) return;
 
       var originals = Array.prototype.slice.call(track.children);
       if (originals.length < 2) return;
+
+      var DOT_COUNT = 14;
+      var activeDotIndex = 0;
+      var dots = [];
+
+      if (dotsRoot) {
+        dotsRoot.innerHTML = "";
+
+        for (var dotIndex = 0; dotIndex < DOT_COUNT; dotIndex += 1) {
+          var dot = document.createElement("span");
+          dot.className = "sn-weekly-prizes__dot" + (dotIndex === 0 ? " is-active" : "");
+          dotsRoot.appendChild(dot);
+          dots.push(dot);
+        }
+      }
 
       var beforeFragment = document.createDocumentFragment();
       var afterFragment = document.createDocumentFragment();
@@ -144,6 +206,16 @@
       var autoTimer = null;
       var resumeTimer = null;
       var isResetting = false;
+
+      function setActiveDot(index) {
+        if (!dots.length) return;
+
+        activeDotIndex = ((index % dots.length) + dots.length) % dots.length;
+
+        dots.forEach(function (dot, dotIndex) {
+          dot.classList.toggle("is-active", dotIndex === activeDotIndex);
+        });
+      }
 
       function getStep() {
         var firstCard = track.querySelector(".sn-weekly-prizes__item");
@@ -185,6 +257,7 @@
 
       function goNext() {
         normalizePosition();
+        setActiveDot(activeDotIndex + 1);
         viewport.scrollBy({ left: getStep(), behavior: "smooth" });
       }
 
@@ -221,6 +294,7 @@
 
       window.setTimeout(function () {
         setInitialPosition();
+        setActiveDot(0);
         startAuto();
       }, 250);
     });
