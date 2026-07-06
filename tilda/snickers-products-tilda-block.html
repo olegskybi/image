@@ -1,0 +1,296 @@
+<!-- Tilda HTML block: Mondelez products carousel -->
+<section class="sn-products" aria-label="Ассортимент акции">
+  <button class="sn-products__arrow sn-products__arrow--prev" type="button" aria-label="Предыдущие товары">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M15 18 9 12l6-6" />
+    </svg>
+  </button>
+
+  <div class="sn-products__viewport">
+    <div class="sn-products__track">
+      <article class="sn-products__card">
+        <div class="sn-products__halo">
+          <img class="sn-products__image" src="https://raw.githubusercontent.com/olegskybi/image/main/assets/mondelez-products/bounty-trio-strawberry-78.png" alt="Шоколадный батончик Bounty Trio Райская Клубника 78г" loading="lazy" decoding="async">
+        </div>
+        <h3 class="sn-products__title">Шоколадный<br>батончик Bounty Trio<br>Райская Клубника 78г.</h3>
+      </article>
+
+      <article class="sn-products__card">
+        <div class="sn-products__halo">
+          <img class="sn-products__image" src="https://raw.githubusercontent.com/olegskybi/image/main/assets/mondelez-products/bounty-trio-82-5.png" alt="Шоколадный батончик Bounty Trio 82,5г" loading="lazy" decoding="async">
+        </div>
+        <h3 class="sn-products__title">Шоколадный<br>батончик Bounty Trio<br>82,5г.</h3>
+      </article>
+
+      <article class="sn-products__card">
+        <div class="sn-products__halo">
+          <img class="sn-products__image" src="https://raw.githubusercontent.com/olegskybi/image/main/assets/mondelez-products/mars-max-81.png" alt="Шоколадный батончик Mars Max 81г" loading="lazy" decoding="async">
+        </div>
+        <h3 class="sn-products__title">Шоколадный<br>батончик Mars Max<br>81г.</h3>
+      </article>
+
+      <article class="sn-products__card">
+        <div class="sn-products__halo">
+          <img class="sn-products__image" src="https://raw.githubusercontent.com/olegskybi/image/main/assets/mondelez-products/snickers-white-81.png" alt="Шоколадный батончик Snickers Белый 81г" loading="lazy" decoding="async">
+        </div>
+        <h3 class="sn-products__title">Шоколадный<br>батончик SNICKERS™<br>Белый 81г.</h3>
+      </article>
+
+      <article class="sn-products__card">
+        <div class="sn-products__halo">
+          <img class="sn-products__image" src="https://raw.githubusercontent.com/olegskybi/image/main/assets/mondelez-products/snickers-hazelnut-81.png" alt="Шоколадный батончик Snickers Лесной Орех 81г" loading="lazy" decoding="async">
+        </div>
+        <h3 class="sn-products__title">Шоколадный<br>батончик SNICKERS™ с<br>лесным орехом 81г.</h3>
+      </article>
+
+      <article class="sn-products__card">
+        <div class="sn-products__halo">
+          <img class="sn-products__image" src="https://raw.githubusercontent.com/olegskybi/image/main/assets/mondelez-products/snickers-super-80.png" alt="Шоколадный батончик Snickers Super 80г" loading="lazy" decoding="async">
+        </div>
+        <h3 class="sn-products__title">Шоколадный<br>батончик SNICKERS™<br>Super 80г.</h3>
+      </article>
+
+      <article class="sn-products__card">
+        <div class="sn-products__halo">
+          <img class="sn-products__image" src="https://raw.githubusercontent.com/olegskybi/image/main/assets/mondelez-products/twix-xtra-salted-caramel-82.png" alt="Шоколадный батончик Twix Xtra Соленая Карамель 82г" loading="lazy" decoding="async">
+        </div>
+        <h3 class="sn-products__title">Шоколадный<br>батончик Twix Xtra<br>Соленая Карамель 82г.</h3>
+      </article>
+    </div>
+  </div>
+
+  <button class="sn-products__arrow sn-products__arrow--next" type="button" aria-label="Следующие товары">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="m9 6 6 6-6 6" />
+    </svg>
+  </button>
+</section>
+
+<style>
+  .sn-products {
+    --sn-products-bg: #2b0c05;
+    --sn-products-halo: #3c140a;
+    --sn-products-text: #ffffff;
+    --sn-products-muted: rgba(255, 255, 255, 0.58);
+    --sn-products-card: clamp(278px, 16.65vw, 341px);
+    --sn-products-gap: clamp(28px, 2.55vw, 52px);
+    --sn-products-side: clamp(72px, 10.75vw, 220px);
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--sn-products-bg);
+    box-sizing: border-box;
+    padding: clamp(44px, 4.5vw, 92px) var(--sn-products-side) clamp(42px, 4.8vw, 72px);
+  }
+
+  .sn-products,
+  .sn-products * {
+    box-sizing: border-box;
+  }
+
+  .sn-products__viewport {
+    width: 100%;
+    max-width: calc((var(--sn-products-card) * 4) + (var(--sn-products-gap) * 3));
+    min-width: 0;
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+  }
+
+  .sn-products__viewport::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .sn-products__track {
+    display: flex;
+    width: max-content;
+    gap: var(--sn-products-gap);
+    align-items: start;
+    scroll-snap-type: x proximity;
+  }
+
+  .sn-products__card {
+    flex: 0 0 var(--sn-products-card);
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+    scroll-snap-align: start;
+  }
+
+  .sn-products__halo {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 1;
+    margin: 0 auto clamp(28px, 2vw, 34px);
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 50% 48%, rgba(84, 28, 15, 0.98) 0%, rgba(67, 20, 10, 0.92) 58%, rgba(53, 14, 7, 0.65) 100%);
+  }
+
+  .sn-products__image {
+    display: block;
+    width: 116%;
+    max-width: none;
+    height: auto;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform: rotate(-14deg) translateY(1px);
+    transform-origin: 50% 50%;
+    filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.25));
+  }
+
+  .sn-products__title {
+    max-width: 292px;
+    margin: 0 auto;
+    color: var(--sn-products-text);
+    font-family: Impact, "Arial Black", Arial, sans-serif;
+    font-size: clamp(18px, 1.18vw, 24px);
+    font-weight: 900;
+    line-height: 1.16;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-wrap: balance;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.14);
+  }
+
+  .sn-products__title::first-line {
+    color: var(--sn-products-muted);
+  }
+
+  .sn-products__arrow {
+    position: absolute;
+    top: calc(clamp(44px, 4.5vw, 92px) + (var(--sn-products-card) / 2) - 19px);
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    color: #3c140a;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .sn-products__arrow:hover {
+    transform: scale(1.04);
+  }
+
+  .sn-products__arrow svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .sn-products__arrow path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .sn-products__arrow--prev {
+    left: clamp(18px, 4.2vw, 86px);
+  }
+
+  .sn-products__arrow--next {
+    right: clamp(18px, 4.2vw, 86px);
+  }
+
+  @media (max-width: 1024px) {
+    .sn-products {
+      --sn-products-card: min(38vw, 300px);
+      --sn-products-gap: 24px;
+      --sn-products-side: 44px;
+    }
+
+    .sn-products__viewport {
+      max-width: none;
+    }
+
+    .sn-products__arrow {
+      display: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .sn-products {
+      --sn-products-card: min(74vw, 286px);
+      --sn-products-gap: 18px;
+      --sn-products-side: 0px;
+      padding: 38px 0 40px;
+    }
+
+    .sn-products__viewport {
+      max-width: none;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding-inline: 18px;
+    }
+
+    .sn-products__track {
+      padding: 0 18px;
+    }
+
+    .sn-products__halo {
+      margin-bottom: 24px;
+    }
+
+    .sn-products__image {
+      width: 118%;
+    }
+
+    .sn-products__title {
+      max-width: 232px;
+      font-size: 19px;
+      line-height: 1.13;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var roots = document.querySelectorAll(".sn-products");
+    roots.forEach(function (root) {
+      var viewport = root.querySelector(".sn-products__viewport");
+      var prev = root.querySelector(".sn-products__arrow--prev");
+      var next = root.querySelector(".sn-products__arrow--next");
+      if (!viewport || !prev || !next) return;
+
+      function getStep() {
+        var firstCard = root.querySelector(".sn-products__card");
+        var styles = window.getComputedStyle(root.querySelector(".sn-products__track"));
+        var gap = parseFloat(styles.columnGap || styles.gap || "0") || 0;
+        return firstCard ? firstCard.getBoundingClientRect().width + gap : viewport.clientWidth * 0.8;
+      }
+
+      function updateArrows() {
+        var max = viewport.scrollWidth - viewport.clientWidth - 2;
+        prev.style.opacity = viewport.scrollLeft <= 2 ? "0.7" : "1";
+        next.style.opacity = viewport.scrollLeft >= max ? "0.7" : "1";
+      }
+
+      prev.addEventListener("click", function () {
+        viewport.scrollBy({ left: -getStep(), behavior: "smooth" });
+      });
+
+      next.addEventListener("click", function () {
+        viewport.scrollBy({ left: getStep(), behavior: "smooth" });
+      });
+
+      viewport.addEventListener("scroll", updateArrows, { passive: true });
+      updateArrows();
+    });
+  })();
+</script>
