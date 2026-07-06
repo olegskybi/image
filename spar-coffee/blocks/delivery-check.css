@@ -1,0 +1,480 @@
+@font-face {
+  font-family: "Spar Typeface";
+  src: url("https://cdn.jsdelivr.net/gh/olegskybi/image@main/spar-coffee/assets/spar-font-normal.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Spar Typeface";
+  src: url("https://cdn.jsdelivr.net/gh/olegskybi/image@main/spar-coffee/assets/spar-font-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+#spar-coffee-delivery,
+#spar-coffee-delivery * {
+  box-sizing: border-box;
+}
+
+#spar-coffee-delivery {
+  --scd-ink: #1f1a17;
+  --scd-muted: #6b625c;
+  --scd-green: #01ac22;
+  --scd-green-dark: #007a35;
+  --scd-lime: #9bd328;
+  --scd-soft: #edffde;
+  --scd-line: rgba(31, 26, 23, 0.1);
+  --scd-shadow: 0 22px 60px rgba(31, 26, 23, 0.08);
+  --scd-shell: 1180px;
+  width: 100%;
+  padding: 64px 0;
+  background: #fff;
+  color: var(--scd-ink);
+  font-family: "Spar Typeface", Inter, Arial, sans-serif;
+}
+
+#spar-coffee-delivery button,
+#spar-coffee-delivery select,
+#spar-coffee-delivery input {
+  font: inherit;
+}
+
+#spar-coffee-delivery .scd-shell {
+  width: var(--scd-shell);
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
+#spar-coffee-delivery .scd-card {
+  width: 100%;
+  min-height: 258px;
+  border: 1px solid rgba(0, 164, 67, 0.12);
+  border-radius: 32px;
+  background: linear-gradient(135deg, #f0ffe4 0%, #edffde 100%);
+  box-shadow: var(--scd-shadow);
+  padding: 39px 41px 40px;
+}
+
+#spar-coffee-delivery h2,
+#spar-coffee-delivery h3,
+#spar-coffee-delivery p {
+  margin: 0;
+}
+
+#spar-coffee-delivery h2 {
+  color: var(--scd-ink);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.4px;
+}
+
+#spar-coffee-delivery .scd-copy {
+  width: 520px;
+  max-width: 100%;
+  margin-top: 12px;
+  color: var(--scd-muted);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19.5px;
+}
+
+#spar-coffee-delivery .scd-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 280px;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+  margin-top: 36px;
+}
+
+#spar-coffee-delivery .scd-field {
+  position: relative;
+  height: 58px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(31, 26, 23, 0.05);
+}
+
+#spar-coffee-delivery .scd-field label {
+  position: absolute;
+  left: 18px;
+  top: 11px;
+  z-index: 1;
+  color: var(--scd-muted);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 13px;
+}
+
+#spar-coffee-delivery .scd-field select {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  border-radius: 18px;
+  appearance: none;
+  background: transparent;
+  color: var(--scd-ink);
+  padding: 23px 54px 10px 18px;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+#spar-coffee-delivery .scd-field::after {
+  position: absolute;
+  right: 29px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-right: 3px solid var(--scd-lime);
+  border-bottom: 3px solid var(--scd-lime);
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+  content: "";
+}
+
+#spar-coffee-delivery .scd-field.is-disabled {
+  opacity: 0.7;
+}
+
+#spar-coffee-delivery .scd-submit {
+  width: 100%;
+  height: 58px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--scd-green);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(0, 106, 58, 0.22);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#spar-coffee-delivery .scd-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(0, 106, 58, 0.28);
+}
+
+#spar-coffee-delivery .scd-map {
+  display: none;
+  margin-top: 28px;
+  border: 1px solid var(--scd-line);
+  border-radius: 28px;
+  overflow: hidden;
+  background: #fff;
+}
+
+#spar-coffee-delivery .scd-map.is-visible {
+  display: block;
+}
+
+#spar-coffee-delivery .scd-search {
+  position: relative;
+  z-index: 4;
+  padding: 26px 28px 24px;
+  background: #fff;
+}
+
+#spar-coffee-delivery .scd-search h3 {
+  margin-bottom: 18px;
+  color: var(--scd-ink);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+#spar-coffee-delivery .scd-address-field {
+  position: relative;
+  height: 64px;
+  border: 1px solid rgba(31, 26, 23, 0.12);
+  border-radius: 20px;
+  background: #fff;
+}
+
+#spar-coffee-delivery .scd-address-input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  border-radius: 20px;
+  background: transparent;
+  color: var(--scd-ink);
+  padding: 0 92px 0 24px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+#spar-coffee-delivery .scd-address-input::placeholder {
+  color: rgba(31, 26, 23, 0.58);
+}
+
+#spar-coffee-delivery .scd-address-clear,
+#spar-coffee-delivery .scd-address-toggle {
+  position: absolute;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+#spar-coffee-delivery .scd-address-clear {
+  right: 66px;
+  color: var(--scd-green-dark);
+}
+
+#spar-coffee-delivery .scd-address-clear::before,
+#spar-coffee-delivery .scd-address-clear::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 3px;
+  border-radius: 999px;
+  background: currentColor;
+  content: "";
+}
+
+#spar-coffee-delivery .scd-address-clear::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#spar-coffee-delivery .scd-address-clear::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#spar-coffee-delivery .scd-address-toggle {
+  right: 22px;
+}
+
+#spar-coffee-delivery .scd-address-toggle::before {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 9px;
+  height: 9px;
+  border-right: 3px solid var(--scd-lime);
+  border-bottom: 3px solid var(--scd-lime);
+  transform: translate(-50%, -50%) rotate(45deg);
+  content: "";
+}
+
+#spar-coffee-delivery .scd-suggestions {
+  position: absolute;
+  z-index: 20;
+  left: 28px;
+  right: 28px;
+  top: 128px;
+  display: none;
+  max-height: 300px;
+  margin: 0;
+  padding: 8px;
+  overflow: auto;
+  list-style: none;
+  border: 1px solid rgba(31, 26, 23, 0.1);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(31, 26, 23, 0.12);
+}
+
+#spar-coffee-delivery .scd-suggestions.is-open {
+  display: block;
+}
+
+#spar-coffee-delivery .scd-suggestions button {
+  width: 100%;
+  padding: 13px 14px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--scd-ink);
+  text-align: left;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+#spar-coffee-delivery .scd-suggestions button:hover {
+  background: #f1ffe8;
+}
+
+#spar-coffee-delivery .scd-address-status {
+  min-height: 26px;
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#spar-coffee-delivery .scd-address-status.is-ok {
+  color: var(--scd-green-dark);
+}
+
+#spar-coffee-delivery .scd-address-status.is-bad {
+  color: #d64035;
+}
+
+#spar-coffee-delivery .scd-map-frame {
+  position: relative;
+  z-index: 1;
+  height: 360px;
+  overflow: hidden;
+  background: #fff;
+}
+
+#spar-coffee-delivery .scd-map-frame > ymaps,
+#spar-coffee-delivery .scd-map-frame iframe {
+  display: block !important;
+  width: 100% !important;
+  height: 360px !important;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+#spar-coffee-delivery .scd-map.is-loading .scd-map-frame > ymaps,
+#spar-coffee-delivery .scd-map.is-loading .scd-map-frame iframe {
+  opacity: 0;
+}
+
+#spar-coffee-delivery .scd-map-loader {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: var(--scd-ink);
+  font-size: 18px;
+  line-height: 24px;
+}
+
+#spar-coffee-delivery .scd-map-loader::before {
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 42px);
+  width: 42px;
+  height: 42px;
+  margin-left: -21px;
+  border: 4px solid #d9ffb4;
+  border-top-color: var(--scd-green);
+  border-radius: 50%;
+  animation: scd-map-spin 0.8s linear infinite;
+  content: "";
+}
+
+#spar-coffee-delivery .scd-map-loader span {
+  margin-top: 42px;
+}
+
+#spar-coffee-delivery .scd-fallback-map {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 24px;
+  color: var(--scd-muted);
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@keyframes scd-map-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 980px) {
+  #spar-coffee-delivery {
+    padding: 48px 0;
+  }
+
+  #spar-coffee-delivery .scd-card {
+    padding: 32px 28px;
+  }
+
+  #spar-coffee-delivery .scd-form {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  #spar-coffee-delivery .scd-submit {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  #spar-coffee-delivery {
+    padding: 36px 0;
+  }
+
+  #spar-coffee-delivery .scd-shell {
+    max-width: calc(100% - 32px);
+  }
+
+  #spar-coffee-delivery .scd-card {
+    border-radius: 24px;
+    padding: 24px 16px;
+  }
+
+  #spar-coffee-delivery h2 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  #spar-coffee-delivery .scd-copy {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  #spar-coffee-delivery .scd-form {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  #spar-coffee-delivery .scd-map {
+    border-radius: 22px;
+  }
+
+  #spar-coffee-delivery .scd-search {
+    padding: 22px 16px;
+  }
+
+  #spar-coffee-delivery .scd-search h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  #spar-coffee-delivery .scd-address-input {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  #spar-coffee-delivery .scd-suggestions {
+    left: 16px;
+    right: 16px;
+    top: 122px;
+    max-height: 260px;
+  }
+
+  #spar-coffee-delivery .scd-map-frame,
+  #spar-coffee-delivery .scd-map-frame > ymaps,
+  #spar-coffee-delivery .scd-map-frame iframe {
+    height: 300px !important;
+  }
+}
