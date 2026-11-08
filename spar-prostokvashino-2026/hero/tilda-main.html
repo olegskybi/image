@@ -1,0 +1,250 @@
+<!-- SPAR: главный экран. Вставить целиком в блок T123. -->
+<style>
+
+@font-face{font-family:SparPromo;font-weight:400;font-style:normal;font-display:swap;src:url("https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/spar-normal.ttf") format("truetype")}
+@font-face{font-family:SparPromo;font-weight:700;font-style:normal;font-display:swap;src:url("https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/spar-bold.ttf") format("truetype")}
+#spar-hero{--spar-canvas:1920;position:relative;isolation:isolate;overflow:hidden;background:#0f7ed9;color:#fff;font-family:SparPromo,Arial,sans-serif;width:100%;container-type:inline-size}
+#spar-hero,#spar-hero *{box-sizing:border-box}
+#spar-hero .spar-hero__layout{position:relative;width:100%;min-height:calc(100cqw * 571 / 1920)}
+#spar-hero .spar-hero__art{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+#spar-hero .spar-hero__art>div{position:relative;height:100%}
+#spar-hero .spar-hero__copy{position:relative;z-index:2;padding-top:calc(100cqw * 87 / 1920);padding-bottom:calc(100cqw * 185 / 1920);margin-left:calc(100cqw * 361 / 1920);width:calc(100cqw * 663 / 1920)}
+#spar-hero .spar-hero__dates{margin:0 0 calc(100cqw * 8 / 1920);font-size:clamp(16px,calc(100cqw * 25 / 1920),32px);line-height:1.56;font-weight:400}
+#spar-hero .spar-hero__title{margin:0;color:#fff;font-family:inherit;font-size:calc(100cqw * 69 / 1920);font-weight:700;line-height:1.145;letter-spacing:0}
+#spar-hero .spar-hero__title span{display:block}
+#spar-hero .spar-hero__button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;height:calc(100cqw * 60 / 1920);width:calc(100cqw * 345 / 1920);min-width:260px;margin-top:calc(100cqw * 34 / 1920);padding:8px 20px;background:#004b99;border:2px solid transparent;border-radius:49px;color:#fff!important;font:700 clamp(16px,calc(100cqw * 25 / 1920),32px)/1.25 SparPromo,Arial,sans-serif;text-align:center;text-decoration:none!important;transition:background-color .18s ease}
+#spar-hero .spar-hero__button:hover{background:#003d7e}
+#spar-hero .spar-hero__button:focus-visible{outline:3px solid #fff;outline-offset:5px}
+@media(min-width:768px) and (max-width:1199px){
+ #spar-hero .spar-hero__copy{margin-left:6%;padding-top:7%;width:49%;padding-bottom:15%}
+ #spar-hero .spar-hero__title{font-size:clamp(36px,4.4vw,53px)}
+ #spar-hero .spar-hero__button{margin-top:24px}
+ #spar-hero .spar-hero__layout{min-height:380px}
+ #spar-hero .spar-hero__art{top:auto;height:calc(100cqw * 571 / 1920)}
+}
+@media(max-width:767px){
+ #spar-hero{--spar-canvas:800}
+ #spar-hero .spar-hero__layout{min-height:0}
+ #spar-hero .spar-hero__copy{margin:0 auto;padding:32px 24px 0;width:100%;max-width:540px;text-align:center}
+ #spar-hero .spar-hero__dates{font-size:16px;line-height:1.5;margin-bottom:8px}
+ #spar-hero .spar-hero__title{font-size:clamp(30px,7.4vw,48px);line-height:1.12}
+ #spar-hero .spar-hero__button{margin-top:24px;width:auto;min-width:0;max-width:100%;min-height:52px;height:auto;padding:14px 24px;font-size:18px}
+ #spar-hero .spar-hero__art{position:relative;inset:auto;width:100%;height:calc(100cqw * 571 / 800);margin-top:24px}
+ #spar-hero .spar-hero__art>div{margin-left:-100cqw}
+}
+@media(prefers-reduced-motion:reduce){#spar-hero .spar-hero__button{transition:none}}
+
+#spar-hero .spar-layer-0{position:absolute;height:calc(100cqw * 900 / var(--spar-canvas));left:calc(100cqw * 20 / var(--spar-canvas));top:calc(100cqw * -35 / var(--spar-canvas));width:calc(100cqw * 2552.693 / var(--spar-canvas))}
+#spar-hero .spar-layer-1{position:absolute;height:calc(100cqw * 900 / var(--spar-canvas));left:calc(100cqw * -9.94 / var(--spar-canvas));top:calc(100cqw * -3.73 / var(--spar-canvas));width:calc(100cqw * 2552.693 / var(--spar-canvas))}
+#spar-hero .spar-layer-2{position:absolute;height:calc(100cqw * 853.044 / var(--spar-canvas));left:calc(50% + (100cqw * 20.93 / var(--spar-canvas)));mix-blend-mode:screen;top:calc(50% + (100cqw * 23.48 / var(--spar-canvas)));width:calc(100cqw * 988.696 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-3{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-4{position:absolute;height:calc(100cqw * 500.567 / var(--spar-canvas));left:calc(100cqw * 1179.23 / var(--spar-canvas));top:calc(100cqw * 34.81 / var(--spar-canvas));width:calc(100cqw * 400.596 / var(--spar-canvas))}
+#spar-hero .spar-layer-5{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-6{position:absolute;height:calc(100cqw * 159 / var(--spar-canvas));left:calc(100cqw * -13.06 / var(--spar-canvas));top:calc(100cqw * 456.73 / var(--spar-canvas));width:calc(100cqw * 2000 / var(--spar-canvas))}
+#spar-hero .spar-layer-7{position:absolute;inset:0;pointer-events:none}
+#spar-hero .spar-layer-8{position:absolute;background:#d9d9d9;inset:0}
+#spar-hero .spar-layer-9{position:absolute;max-width:none;object-fit:cover;width:100%;height:100%}
+#spar-hero .spar-layer-10{position:absolute;height:calc(100cqw * 140 / var(--spar-canvas));left:calc(50% - (100cqw * 347.4 / var(--spar-canvas)));top:calc(50% + (100cqw * 142.73 / var(--spar-canvas)));width:calc(100cqw * 1962 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-11{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-12{position:absolute;display:contents;left:calc(100cqw * 818.91 / var(--spar-canvas));top:calc(100cqw * 134.25 / var(--spar-canvas))}
+#spar-hero .spar-layer-13{position:absolute;display:contents;inset:14.92% 40.44% 23.85% 32.08%}
+#spar-hero .spar-layer-14{position:absolute;display:contents;inset:14.92% 40.44% 23.85% 32.08%}
+#spar-hero .spar-layer-15{position:absolute;display:contents;inset:31.22% 54.81% 42.13% 38.37%}
+#spar-hero .spar-layer-16{position:absolute;height:calc(100cqw * 39.986 / var(--spar-canvas));left:calc(50% - (100cqw * 203.88 / var(--spar-canvas)));mix-blend-mode:multiply;top:calc(50% + (100cqw * 50.86 / var(--spar-canvas)));width:calc(100cqw * 162.297 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-17{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-18{position:absolute;height:calc(100cqw * 10.673 / var(--spar-canvas));left:calc(50% - (100cqw * 215.64 / var(--spar-canvas)));top:calc(50% + (100cqw * 50.32 / var(--spar-canvas)));width:calc(100cqw * 77.62 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-19{position:absolute;inset:-70.93% -9.9% -74.93% -10.1%}
+#spar-hero .spar-layer-20{display:block;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-21{position:absolute;height:calc(100cqw * 234.023 / var(--spar-canvas));left:calc(50% - (100cqw * 224.23 / var(--spar-canvas)));top:calc(50% - (100cqw * 52.05 / var(--spar-canvas)));width:calc(100cqw * 145.112 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-22{position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%}
+#spar-hero .spar-layer-23{position:absolute;display:contents;left:calc(50% - (100cqw * 106.68 / var(--spar-canvas)));top:calc(50% - (100cqw * 109.57 / var(--spar-canvas)));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-24{position:absolute;height:calc(100cqw * 10.405 / var(--spar-canvas));left:calc(50% - (100cqw * 115.06 / var(--spar-canvas)));top:calc(50% + (100cqw * 76.03 / var(--spar-canvas)));width:calc(100cqw * 127.57 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-25{position:absolute;inset:-66.95% -5.97% -74.3% -5.83%}
+#spar-hero .spar-layer-26{display:block;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-27{position:absolute;height:calc(100cqw * 43.812 / var(--spar-canvas));left:calc(50% - (100cqw * 106.68 / var(--spar-canvas)));mix-blend-mode:multiply;top:calc(50% + (100cqw * 74.7 / var(--spar-canvas)));width:calc(100cqw * 206.174 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-28{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-29{position:absolute;height:calc(100cqw * 411.059 / var(--spar-canvas));left:calc(50% - (100cqw * 112.1 / var(--spar-canvas)));top:calc(50% - (100cqw * 110.22 / var(--spar-canvas)));width:calc(100cqw * 164.424 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-30{position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%}
+#spar-hero .spar-layer-31{position:absolute;display:contents;inset:30.12% 40.44% 39.29% 52.06%}
+#spar-hero .spar-layer-32{position:absolute;height:calc(100cqw * 10.389 / var(--spar-canvas));left:calc(50% + (100cqw * 158.62 / var(--spar-canvas)));top:calc(50% + (100cqw * 80.77 / var(--spar-canvas)));width:calc(100cqw * 72.724 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-33{position:absolute;inset:-65.57% -10.66% -75% -10.54%}
+#spar-hero .spar-layer-34{display:block;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-35{position:absolute;height:calc(100cqw * 33.765 / var(--spar-canvas));left:calc(50% + (100cqw * 174.2 / var(--spar-canvas)));mix-blend-mode:multiply;top:calc(50% + (100cqw * 79.47 / var(--spar-canvas)));width:calc(100cqw * 135.058 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-36{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-37{position:absolute;height:calc(100cqw * 28.57 / var(--spar-canvas));left:calc(50% + (100cqw * 137.84 / var(--spar-canvas)));mix-blend-mode:multiply;top:calc(50% + (100cqw * 76.88 / var(--spar-canvas)));width:calc(100cqw * 114.28 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-38{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-39{position:absolute;height:calc(100cqw * 272.714 / var(--spar-canvas));left:calc(50% + (100cqw * 148.23 / var(--spar-canvas)));top:calc(50% - (100cqw * 42.6 / var(--spar-canvas)));width:calc(100cqw * 191.393 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-40{position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%}
+#spar-hero .spar-layer-41{position:absolute;display:flex;height:calc(100cqw * 52.136 / var(--spar-canvas));align-items:center;justify-content:center;left:calc(100cqw * 1410.81 / var(--spar-canvas));mix-blend-mode:multiply;top:calc(100cqw * 275.48 / var(--spar-canvas));width:calc(100cqw * 83.77 / var(--spar-canvas))}
+#spar-hero .spar-layer-42{flex:none;transform:rotate(13.71deg)}
+#spar-hero .spar-layer-43{height:calc(100cqw * 34.694 / var(--spar-canvas));position:relative;width:calc(100cqw * 77.763 / var(--spar-canvas))}
+#spar-hero .spar-layer-44{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-45{position:absolute;display:flex;height:calc(100cqw * 52.136 / var(--spar-canvas));align-items:center;justify-content:center;left:calc(100cqw * 1424.58 / var(--spar-canvas));mix-blend-mode:multiply;top:calc(100cqw * 283.01 / var(--spar-canvas));width:calc(100cqw * 83.77 / var(--spar-canvas))}
+#spar-hero .spar-layer-46{flex:none;transform:rotate(13.71deg)}
+#spar-hero .spar-layer-47{height:calc(100cqw * 34.694 / var(--spar-canvas));position:relative;width:calc(100cqw * 77.763 / var(--spar-canvas))}
+#spar-hero .spar-layer-48{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-49{position:absolute;display:contents;left:calc(50% + (100cqw * 20.97 / var(--spar-canvas)));top:calc(50% + (100cqw * 6.99 / var(--spar-canvas)));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-50{position:absolute;height:calc(100cqw * 43.812 / var(--spar-canvas));left:calc(50% + (100cqw * 24.84 / var(--spar-canvas)));mix-blend-mode:multiply;top:calc(50% + (100cqw * 112.65 / var(--spar-canvas)));width:calc(100cqw * 180.402 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-51{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-52{position:absolute;height:calc(100cqw * 10.405 / var(--spar-canvas));left:calc(50% + (100cqw * 21.62 / var(--spar-canvas)));top:calc(50% + (100cqw * 110.12 / var(--spar-canvas)));width:calc(100cqw * 127.57 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-53{position:absolute;inset:-66.95% -5.97% -74.3% -5.83%}
+#spar-hero .spar-layer-54{display:block;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-55{position:absolute;left:calc(50% + (100cqw * 20.97 / var(--spar-canvas)));filter:drop-shadow(0 3px 4px rgb(0 0 0 / .1));width:calc(100cqw * 255.14 / var(--spar-canvas));height:calc(100cqw * 255.14 / var(--spar-canvas));top:calc(50% + (100cqw * 6.99 / var(--spar-canvas)));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-56{position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%}
+#spar-hero .spar-layer-57{position:absolute;display:contents;height:calc(100cqw * 364.464 / var(--spar-canvas));left:calc(50% - (100cqw * 272.38 / var(--spar-canvas)));top:calc(50% + (100cqw * 53.14 / var(--spar-canvas)));width:calc(100cqw * 370.117 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-58{position:absolute;display:flex;height:calc(100cqw * 41.744 / var(--spar-canvas));align-items:center;justify-content:center;left:calc(50% - (100cqw * 220.25 / var(--spar-canvas)));mix-blend-mode:multiply;top:calc(50% + (100cqw * 118.38 / var(--spar-canvas)));width:calc(100cqw * 110.177 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-59{flex:none;transform:rotate(-6.13deg)}
+#spar-hero .spar-layer-60{height:calc(100cqw * 30.438 / var(--spar-canvas));position:relative;width:calc(100cqw * 107.542 / var(--spar-canvas))}
+#spar-hero .spar-layer-61{position:absolute;inset:-35.97% -10.24% -36.24% -9.53%}
+#spar-hero .spar-layer-62{display:block;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-63{position:absolute;display:flex;height:calc(100cqw * 107.045 / var(--spar-canvas));align-items:center;justify-content:center;left:calc(50% - (100cqw * 272.31 / var(--spar-canvas)));mix-blend-mode:multiply;top:calc(50% + (100cqw * 106.33 / var(--spar-canvas)));width:calc(100cqw * 261.512 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-64{flex:none;transform:scaleY(-1) rotate(-168.85deg)}
+#spar-hero .spar-layer-65{height:calc(100cqw * 58.834 / var(--spar-canvas));position:relative;width:calc(100cqw * 254.947 / var(--spar-canvas))}
+#spar-hero .spar-layer-66{position:absolute;inset:-16.67% -3.85%}
+#spar-hero .spar-layer-67{display:block;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-68{position:absolute;display:flex;height:calc(100cqw * 356.066 / var(--spar-canvas));align-items:center;justify-content:center;left:calc(50% - (100cqw * 272.38 / var(--spar-canvas)));top:calc(50% + (100cqw * 53.14 / var(--spar-canvas)));width:calc(100cqw * 361.38 / var(--spar-canvas));transform:translateX(-50%) translateY(-50%)}
+#spar-hero .spar-layer-69{flex:none;transform:rotate(-19.2deg) skewX(-0.09deg)}
+#spar-hero .spar-layer-70{height:calc(100cqw * 277.07 / var(--spar-canvas));position:relative;width:calc(100cqw * 286.632 / var(--spar-canvas))}
+#spar-hero .spar-layer-71{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+#spar-hero .spar-layer-72{position:absolute;display:contents;left:calc(100cqw * 1400.96 / var(--spar-canvas));top:calc(100cqw * 258.29 / var(--spar-canvas))}
+#spar-hero .spar-layer-73{position:absolute;height:calc(100cqw * 500.567 / var(--spar-canvas));left:calc(100cqw * 1179.23 / var(--spar-canvas));mask-mode:alpha;mask-composite:intersect;mask-clip:no-clip;mask-repeat:no-repeat;mask-position:calc(100cqw * 221.73 / var(--spar-canvas)) calc(100cqw * 223.48 / var(--spar-canvas));mask-size:calc(100cqw * 124.053 / var(--spar-canvas)) calc(100cqw * 59.021 / var(--spar-canvas));top:calc(100cqw * 34.81 / var(--spar-canvas));width:calc(100cqw * 400.596 / var(--spar-canvas));mask-image:url("https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/3ff71.svg")}
+#spar-hero .spar-layer-74{position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%}
+</style>
+<section id="spar-hero" aria-labelledby="spar-hero-title" data-figma-node="79:381">
+  <div class="spar-hero__layout">
+    <div class="spar-hero__copy">
+      <p class="spar-hero__dates">С 09.11 по 29.11</p>
+      <h1 id="spar-hero-title" class="spar-hero__title"><span>Выигрывай призы</span><span>с пользой</span></h1>
+      <a class="spar-hero__button" href="#rec2269486951">Зарегистрировать чек</a>
+    </div>
+    <div class="spar-hero__art" role="img" aria-label="Матроскин с молочными продуктами Простоквашино и бонусами SPAR">
+      <div aria-hidden="true">      <div class="spar-layer-0" data-node-id="79:382">
+        <div class="spar-layer-1" data-node-id="79:383">
+          <div class="spar-layer-2" data-node-id="79:384">
+            <img alt="" class="spar-layer-3" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/2a887.svg" decoding="async" />
+          </div>
+          <div class="spar-layer-4" data-node-id="79:385" data-name="Полосатый_кот_приветствует_гостей 1 1">
+            <img alt="" class="spar-layer-5" height="500.567" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/5a541.png" width="400.596" decoding="async" />
+          </div>
+          <div class="spar-layer-6" data-node-id="79:386">
+            <div aria-hidden class="spar-layer-7">
+              <div class="spar-layer-8" ></div>
+              <img alt="" class="spar-layer-9" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/514a7.png" decoding="async" />
+            </div>
+          </div>
+          <div class="spar-layer-10" data-node-id="79:387" data-name="закругление">
+            <img alt="" class="spar-layer-11" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/0f340.svg" decoding="async" />
+          </div>
+          <div class="spar-layer-12" data-node-id="79:388">
+            <div class="spar-layer-13" data-node-id="79:389">
+              <div class="spar-layer-14" data-node-id="79:390">
+                <div class="spar-layer-15" data-node-id="79:391">
+                  <div class="spar-layer-16" data-node-id="79:392">
+                    <img alt="" class="spar-layer-17" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/98237.svg" decoding="async" />
+                  </div>
+                  <div class="spar-layer-18" data-node-id="79:393">
+                    <div class="spar-layer-19">
+                      <img alt="" class="spar-layer-20" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/9e30e.svg" decoding="async" />
+                    </div>
+                  </div>
+                  <div class="spar-layer-21" data-node-id="79:394" data-name="shutterstock_2032753658 2">
+                    <img alt="" class="spar-layer-22" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/01c2e.png" decoding="async" />
+                  </div>
+                </div>
+                <div class="spar-layer-23" data-node-id="79:398">
+                  <div class="spar-layer-24" data-node-id="79:399">
+                    <div class="spar-layer-25">
+                      <img alt="" class="spar-layer-26" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/577f4.svg" decoding="async" />
+                    </div>
+                  </div>
+                  <div class="spar-layer-27" data-node-id="79:400">
+                    <img alt="" class="spar-layer-28" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/94002.svg" decoding="async" />
+                  </div>
+                  <div class="spar-layer-29" data-node-id="79:401" data-name="19702107 1">
+                    <img alt="" class="spar-layer-30" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/8642b.png" decoding="async" />
+                  </div>
+                </div>
+                <div class="spar-layer-31" data-node-id="79:402">
+                  <div class="spar-layer-32" data-node-id="79:403">
+                    <div class="spar-layer-33">
+                      <img alt="" class="spar-layer-34" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/c8ee4.svg" decoding="async" />
+                    </div>
+                  </div>
+                  <div class="spar-layer-35" data-node-id="79:404">
+                    <img alt="" class="spar-layer-36" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/4adba.svg" decoding="async" />
+                  </div>
+                  <div class="spar-layer-37" data-node-id="79:405">
+                    <img alt="" class="spar-layer-38" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/595e3.svg" decoding="async" />
+                  </div>
+                  <div class="spar-layer-39" data-node-id="79:406" data-name="101104141 1">
+                    <img alt="" class="spar-layer-40" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/20af7.png" decoding="async" />
+                  </div>
+                  <div class="spar-layer-41" data-node-id="79:407">
+                    <div class="spar-layer-42">
+                      <div class="spar-layer-43">
+                        <img alt="" class="spar-layer-44" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/6b47d.svg" decoding="async" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="spar-layer-45" data-node-id="79:408">
+                    <div class="spar-layer-46">
+                      <div class="spar-layer-47">
+                        <img alt="" class="spar-layer-48" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/6b47d.svg" decoding="async" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="spar-layer-49" data-node-id="79:409">
+                  <div class="spar-layer-50" data-node-id="79:410">
+                    <img alt="" class="spar-layer-51" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/a940a.svg" decoding="async" />
+                  </div>
+                  <div class="spar-layer-52" data-node-id="79:411">
+                    <div class="spar-layer-53">
+                      <img alt="" class="spar-layer-54" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/0182a.svg" decoding="async" />
+                    </div>
+                  </div>
+                  <div class="spar-layer-55" data-node-id="79:412" data-name="101104183 1">
+                    <img alt="" class="spar-layer-56" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/bebcb.png" decoding="async" />
+                  </div>
+                </div>
+                <div class="spar-layer-57" data-node-id="79:413">
+                  <div class="spar-layer-58" data-node-id="79:414">
+                    <div class="spar-layer-59">
+                      <div class="spar-layer-60">
+                        <div class="spar-layer-61">
+                          <img alt="" class="spar-layer-62" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/f5a67.svg" decoding="async" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="spar-layer-63" data-node-id="79:415">
+                    <div class="spar-layer-64">
+                      <div class="spar-layer-65">
+                        <div class="spar-layer-66">
+                          <img alt="" class="spar-layer-67" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/c5df3.svg" decoding="async" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="spar-layer-68" data-node-id="79:416">
+                    <div class="spar-layer-69">
+                      <div class="spar-layer-70" data-name="бонусы спар">
+                        <img alt="" class="spar-layer-71" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/b7b2f.svg" decoding="async" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spar-layer-72" data-node-id="79:429" data-name="Mask group">
+            <div class="spar-layer-73" data-node-id="79:431" data-mask="paw" data-name="Полосатый_кот_приветствует_гостей 1 2">
+              <img alt="" class="spar-layer-74" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/hero/assets/88774.png" decoding="async" />
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+    </div>
+  </div>
+</section>

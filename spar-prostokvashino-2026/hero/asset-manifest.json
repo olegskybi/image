@@ -1,0 +1,381 @@
+{
+  "figmaFile": "konvmvXiM0ACaO4ExAD5Q4",
+  "figmaNode": "79:381",
+  "layers": [
+    {
+      "class": "spar-layer-0",
+      "node": "79:382",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-1",
+      "node": "79:383",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-2",
+      "node": "79:384",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-3",
+      "node": null,
+      "asset": "assets/2a887.svg"
+    },
+    {
+      "class": "spar-layer-4",
+      "node": "79:385",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-5",
+      "node": null,
+      "asset": "assets/5a541.png"
+    },
+    {
+      "class": "spar-layer-6",
+      "node": "79:386",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-7",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-8",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-9",
+      "node": null,
+      "asset": "assets/514a7.png"
+    },
+    {
+      "class": "spar-layer-10",
+      "node": "79:387",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-11",
+      "node": null,
+      "asset": "assets/0f340.svg"
+    },
+    {
+      "class": "spar-layer-12",
+      "node": "79:388",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-13",
+      "node": "79:389",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-14",
+      "node": "79:390",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-15",
+      "node": "79:391",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-16",
+      "node": "79:392",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-17",
+      "node": null,
+      "asset": "assets/98237.svg"
+    },
+    {
+      "class": "spar-layer-18",
+      "node": "79:393",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-19",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-20",
+      "node": null,
+      "asset": "assets/9e30e.svg"
+    },
+    {
+      "class": "spar-layer-21",
+      "node": "79:394",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-22",
+      "node": null,
+      "asset": "assets/01c2e.png"
+    },
+    {
+      "class": "spar-layer-23",
+      "node": "79:398",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-24",
+      "node": "79:399",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-25",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-26",
+      "node": null,
+      "asset": "assets/577f4.svg"
+    },
+    {
+      "class": "spar-layer-27",
+      "node": "79:400",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-28",
+      "node": null,
+      "asset": "assets/94002.svg"
+    },
+    {
+      "class": "spar-layer-29",
+      "node": "79:401",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-30",
+      "node": null,
+      "asset": "assets/8642b.png"
+    },
+    {
+      "class": "spar-layer-31",
+      "node": "79:402",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-32",
+      "node": "79:403",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-33",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-34",
+      "node": null,
+      "asset": "assets/c8ee4.svg"
+    },
+    {
+      "class": "spar-layer-35",
+      "node": "79:404",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-36",
+      "node": null,
+      "asset": "assets/4adba.svg"
+    },
+    {
+      "class": "spar-layer-37",
+      "node": "79:405",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-38",
+      "node": null,
+      "asset": "assets/595e3.svg"
+    },
+    {
+      "class": "spar-layer-39",
+      "node": "79:406",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-40",
+      "node": null,
+      "asset": "assets/20af7.png"
+    },
+    {
+      "class": "spar-layer-41",
+      "node": "79:407",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-42",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-43",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-44",
+      "node": null,
+      "asset": "assets/6b47d.svg"
+    },
+    {
+      "class": "spar-layer-45",
+      "node": "79:408",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-46",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-47",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-48",
+      "node": null,
+      "asset": "assets/6b47d.svg"
+    },
+    {
+      "class": "spar-layer-49",
+      "node": "79:409",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-50",
+      "node": "79:410",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-51",
+      "node": null,
+      "asset": "assets/a940a.svg"
+    },
+    {
+      "class": "spar-layer-52",
+      "node": "79:411",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-53",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-54",
+      "node": null,
+      "asset": "assets/0182a.svg"
+    },
+    {
+      "class": "spar-layer-55",
+      "node": "79:412",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-56",
+      "node": null,
+      "asset": "assets/bebcb.png"
+    },
+    {
+      "class": "spar-layer-57",
+      "node": "79:413",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-58",
+      "node": "79:414",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-59",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-60",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-61",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-62",
+      "node": null,
+      "asset": "assets/f5a67.svg"
+    },
+    {
+      "class": "spar-layer-63",
+      "node": "79:415",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-64",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-65",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-66",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-67",
+      "node": null,
+      "asset": "assets/c5df3.svg"
+    },
+    {
+      "class": "spar-layer-68",
+      "node": "79:416",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-69",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-70",
+      "node": null,
+      "asset": null
+    },
+    {
+      "class": "spar-layer-71",
+      "node": null,
+      "asset": "assets/b7b2f.svg"
+    },
+    {
+      "class": "spar-layer-72",
+      "node": "79:429",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-73",
+      "node": "79:431",
+      "asset": null
+    },
+    {
+      "class": "spar-layer-74",
+      "node": null,
+      "asset": "assets/88774.png"
+    }
+  ]
+}
