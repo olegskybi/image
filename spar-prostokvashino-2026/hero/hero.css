@@ -107,3 +107,4 @@
 #spar-hero .spar-layer-72{position:absolute;display:contents;left:calc(100cqw * 1400.96 / var(--spar-canvas));top:calc(100cqw * 258.29 / var(--spar-canvas))}
 #spar-hero .spar-layer-73{position:absolute;height:calc(100cqw * 500.567 / var(--spar-canvas));left:calc(100cqw * 1179.23 / var(--spar-canvas));mask-mode:alpha;mask-composite:intersect;mask-clip:no-clip;mask-repeat:no-repeat;mask-position:calc(100cqw * 221.73 / var(--spar-canvas)) calc(100cqw * 223.48 / var(--spar-canvas));mask-size:calc(100cqw * 124.053 / var(--spar-canvas)) calc(100cqw * 59.021 / var(--spar-canvas));top:calc(100cqw * 34.81 / var(--spar-canvas));width:calc(100cqw * 400.596 / var(--spar-canvas));mask-image:url("assets/3ff71.svg")}
 #spar-hero .spar-layer-74{position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%}
+#spar-hero .spar-layer-10::after{content:"";position:absolute;top:50%;left:0;width:100%;height:2000px;background:#0063b4}
