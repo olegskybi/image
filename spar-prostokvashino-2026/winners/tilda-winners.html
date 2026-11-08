@@ -1,0 +1,142 @@
+<!-- SPAR: Победители розыгрыша. Отдельный T123. Данные — в spar-winners-data ниже. -->
+<style>
+@font-face{font-family:SparWinners;font-style:normal;font-weight:700;font-display:swap;src:url("https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/winners/assets/spar-bold.ttf") format("truetype")}
+@font-face{font-family:SparWinners;font-style:normal;font-weight:400;font-display:swap;src:url("https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/winners/assets/spar-normal.ttf") format("truetype")}
+#spar-winners{padding:0 0 64px;background:#0f7ed9;color:#004b99;font-family:SparWinners,Arial,sans-serif;isolation:isolate}
+#spar-winners,#spar-winners *{box-sizing:border-box}
+#spar-winners .spar-winners__title{font:700 48px/58px SparWinners,Arial,sans-serif;letter-spacing:1px;color:#fff;text-align:center;margin:0 20px 80px}
+#spar-winners .spar-winners__inner{max-width:1120px;width:calc(100% - 64px);margin:0 auto}
+#spar-winners .spar-winners__search-label{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+#spar-winners .spar-winners__search{display:block;width:400px;max-width:100%;height:60px;padding:0 30px;border:2px solid #004b99;border-radius:20px;background:#fff;color:#004b99;font:400 16px/1.3 SparWinners,Arial,sans-serif;margin:0 auto 24px;box-shadow:0 2px 8px rgb(0 0 0 / .05)}
+#spar-winners .spar-winners__search::placeholder{color:#767676;opacity:1}
+#spar-winners .spar-winners__dates{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;margin:0 0 40px}
+#spar-winners .spar-winners__date{min-height:44px;border:1px solid #fff;border-radius:24px;padding:10px 20px;background:transparent;color:#fff;font:400 13px/1.3 Arial,sans-serif;cursor:pointer}
+#spar-winners .spar-winners__date[aria-pressed="true"]{background:#004b99;border-color:#004b99}
+#spar-winners .spar-winners__date:hover{background:#005aaf}
+#spar-winners .spar-winners__date:focus-visible,#spar-winners .spar-winners__search:focus-visible{outline:3px solid #fff;outline-offset:4px}
+#spar-winners .spar-winners__table-wrap{border-radius:30px;overflow:auto;max-height:520px;background:#fff;box-shadow:0 2px 8px rgb(0 0 0 / .05)}
+#spar-winners .spar-winners__table{border-collapse:separate;border-spacing:0;width:100%;table-layout:fixed;font-size:16px}
+#spar-winners .spar-winners__table th{position:sticky;top:0;background:#004b99;color:#fff;text-align:left;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:24px 16px;line-height:1.3}
+#spar-winners .spar-winners__table th:first-child{width:22%;text-align:center}
+#spar-winners .spar-winners__table th:nth-child(2){width:48%}
+#spar-winners .spar-winners__table th:nth-child(3){width:30%}
+#spar-winners .spar-winners__table td{padding:18px 16px;overflow-wrap:anywhere;border-bottom:1px solid #e0effa;line-height:1.4}
+#spar-winners .spar-winners__table td:first-child{text-align:center}
+#spar-winners .spar-winners__table tr:last-child td{border-bottom:0}
+#spar-winners .spar-winners__table td.spar-winners__empty{padding:40px 20px;text-align:center}
+#spar-winners .spar-winners__status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+@media(max-width:767px){
+ #spar-winners{padding:16px 0 40px}
+ #spar-winners .spar-winners__title{font-size:clamp(28px,7.4vw,36px);line-height:1.15;letter-spacing:0;margin:0 16px 32px}
+ #spar-winners .spar-winners__inner{width:calc(100% - 32px)}
+ #spar-winners .spar-winners__search{height:56px;padding:0 16px;margin-bottom:20px}
+ #spar-winners .spar-winners__dates{gap:8px;margin-bottom:24px}
+ #spar-winners .spar-winners__date{padding:10px 16px;min-height:44px}
+ #spar-winners .spar-winners__table-wrap{border-radius:20px}
+ #spar-winners .spar-winners__table th{font-size:10px;letter-spacing:0;padding:18px 8px;overflow-wrap:anywhere}
+ #spar-winners .spar-winners__table th:first-child{width:34%}
+ #spar-winners .spar-winners__table th:nth-child(2){width:36%}
+ #spar-winners .spar-winners__table th:nth-child(3){width:30%}
+ #spar-winners .spar-winners__table td{font-size:13px;padding:16px 8px}
+ #spar-winners .spar-winners__table td.spar-winners__empty{padding:32px 16px;font-size:16px}
+}
+
+</style>
+<section id="spar-winners" aria-labelledby="spar-winners-title">
+  <h2 id="spar-winners-title" class="spar-winners__title">Победители розыгрыша</h2>
+  <div class="spar-winners__inner">
+    <label class="spar-winners__search-label" for="spar-winners-search">Поиск по номеру участника</label>
+    <input id="spar-winners-search" class="spar-winners__search" type="search" placeholder="Поиск по номеру участника" autocomplete="off" maxlength="80" aria-controls="spar-winners-table">
+    <div class="spar-winners__dates" role="group" aria-label="Дата розыгрыша">
+<button class="spar-winners__date" type="button" data-draw="2026-05-27" aria-pressed="true" aria-controls="spar-winners-table">27.05.2026</button>
+<button class="spar-winners__date" type="button" data-draw="2026-06-03" aria-pressed="false" aria-controls="spar-winners-table">03.06.2026</button>
+<button class="spar-winners__date" type="button" data-draw="2026-06-10" aria-pressed="false" aria-controls="spar-winners-table">10.06.2026</button>
+<button class="spar-winners__date" type="button" data-draw="2026-06-17" aria-pressed="false" aria-controls="spar-winners-table">17.06.2026</button>
+<button class="spar-winners__date" type="button" data-draw="2026-06-24" aria-pressed="false" aria-controls="spar-winners-table">24.06.2026</button>
+<button class="spar-winners__date" type="button" data-draw="2026-07-01" aria-pressed="false" aria-controls="spar-winners-table">01.07.2026</button>
+    </div>
+    <div class="spar-winners__table-wrap">
+      <table id="spar-winners-table" class="spar-winners__table" aria-label="Победители розыгрыша за 27.05.2026">
+        <thead><tr><th scope="col">№ участника</th><th scope="col">ФИО</th><th scope="col">Приз</th></tr></thead>
+        <tbody><tr><td class="spar-winners__empty" colspan="3">Победителей пока нет</td></tr></tbody>
+      </table>
+    </div>
+    <p class="spar-winners__status" role="status" aria-live="polite" aria-atomic="true"></p>
+  </div>
+</section><script type="application/json" id="spar-winners-data">
+{
+  "draws": [
+    {
+      "id": "2026-05-27",
+      "label": "27.05.2026",
+      "winners": []
+    },
+    {
+      "id": "2026-06-03",
+      "label": "03.06.2026",
+      "winners": []
+    },
+    {
+      "id": "2026-06-10",
+      "label": "10.06.2026",
+      "winners": []
+    },
+    {
+      "id": "2026-06-17",
+      "label": "17.06.2026",
+      "winners": []
+    },
+    {
+      "id": "2026-06-24",
+      "label": "24.06.2026",
+      "winners": []
+    },
+    {
+      "id": "2026-07-01",
+      "label": "01.07.2026",
+      "winners": []
+    }
+  ]
+}
+</script>
+<script>
+(() => {
+ const root=document.getElementById('spar-winners');
+ if(!root || root.dataset.initialized) return;
+ const configNode=document.getElementById('spar-winners-data');
+ let config;
+ try {config=JSON.parse(configNode.textContent);} catch {return;}
+ if(!Array.isArray(config.draws) || !config.draws.length)return;
+ root.dataset.initialized='true';
+ const search=root.querySelector('.spar-winners__search');
+ const dates=root.querySelector('.spar-winners__dates');
+ const table=root.querySelector('table');
+ const body=table.querySelector('tbody');
+ const status=root.querySelector('.spar-winners__status');
+ let active=config.draws[0].id;
+ const normalize=value=>String(value??'').trim().toLocaleLowerCase('ru-RU').replace(/\s/g,'');
+ function render(){
+   const draw=config.draws.find(item=>item.id===active);
+   const query=normalize(search.value);
+   const winners=Array.isArray(draw.winners)?draw.winners:[];
+   const matches=winners.filter(winner=>normalize(winner.participantId).includes(query));
+   body.replaceChildren();
+   table.setAttribute('aria-label',`Победители розыгрыша за ${draw.label}`);
+   dates.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.draw===active)));
+   if(!matches.length){
+     const row=document.createElement('tr');const cell=document.createElement('td');
+     cell.colSpan=3;cell.className='spar-winners__empty';
+     cell.textContent=winners.length?'По этому номеру участника ничего не найдено':'Победителей пока нет';
+     row.append(cell);body.append(row);status.textContent=`${draw.label}. ${cell.textContent}`;
+   }else{
+     for(const winner of matches){const row=document.createElement('tr');for(const key of ['participantId','name','prize']){const cell=document.createElement('td');cell.textContent=String(winner[key]??'');row.append(cell);}body.append(row);}
+     status.textContent=`${draw.label}. Найдено победителей: ${matches.length}`;
+   }
+ }
+ dates.replaceChildren();
+ for(const draw of config.draws){const button=document.createElement('button');button.type='button';button.className='spar-winners__date';button.dataset.draw=draw.id;button.textContent=draw.label;button.setAttribute('aria-controls','spar-winners-table');button.addEventListener('click',()=>{active=draw.id;render();});dates.append(button);}
+ let timer;
+ search.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(render,150);});
+ render();
+})();
+</script>
