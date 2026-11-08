@@ -1,0 +1,29 @@
+{
+  "figmaFile": "konvmvXiM0ACaO4ExAD5Q4",
+  "node": "79:190",
+  "assets": [
+    {
+      "file": "bebcb.png",
+      "nodes": [
+        "79:203",
+        "79:209",
+        "79:215"
+      ],
+      "slot": "three product cards"
+    },
+    {
+      "file": "6556d.svg",
+      "nodes": [
+        "79:199"
+      ],
+      "slot": "previous button"
+    },
+    {
+      "file": "de0b7.svg",
+      "nodes": [
+        "79:220"
+      ],
+      "slot": "next button"
+    }
+  ]
+}
