@@ -1,0 +1,61 @@
+<!-- SPAR: Вопрос-ответ. Отдельный T123. Ответы пока временные. -->
+<style>
+@font-face{font-family:SparFaq;font-style:normal;font-weight:700;font-display:swap;src:url("https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/faq/assets/spar-bold.ttf") format("truetype")}
+@font-face{font-family:SparFaq;font-style:normal;font-weight:400;font-display:swap;src:url("https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/faq/assets/spar-normal.ttf") format("truetype")}
+#spar-faq{background:#0f7ed9;color:#004b99;padding:0 0 30px;font-family:SparFaq,Arial,sans-serif;isolation:isolate}
+#spar-faq,#spar-faq *{box-sizing:border-box}
+#spar-faq .spar-faq__title{font:700 48px/58px SparFaq,Arial,sans-serif;letter-spacing:1px;color:#fff;text-align:center;margin:0 20px 30px}
+#spar-faq .spar-faq__list{max-width:1156px;width:calc(100% - 64px);margin:0 auto;display:grid;gap:2px}
+#spar-faq .spar-faq__item{background:#fff;border-radius:30px;min-width:0}
+#spar-faq .spar-faq__question{display:flex;align-items:center;justify-content:space-between;gap:20px;list-style:none;cursor:pointer;padding:21px 18px 21px 30px;min-height:82px;font:700 24px/1.35 SparFaq,Arial,sans-serif;overflow-wrap:anywhere;border-radius:30px}
+#spar-faq .spar-faq__question::-webkit-details-marker{display:none}
+#spar-faq .spar-faq__question::marker{content:""}
+#spar-faq .spar-faq__question:focus-visible{outline:3px solid #004b99;outline-offset:-5px}
+#spar-faq .spar-faq__question:hover{background:#f2f9ff}
+#spar-faq .spar-faq__icon{display:grid;place-items:center;flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#004b99}
+#spar-faq .spar-faq__icon img{display:block;width:23px;height:23px;transition:transform .18s ease}
+#spar-faq .spar-faq__item[open] .spar-faq__icon img{transform:rotate(45deg)}
+#spar-faq .spar-faq__answer{font:400 18px/1.5 SparFaq,Arial,sans-serif;padding:0 78px 26px 30px;overflow-wrap:anywhere}
+#spar-faq .spar-faq__answer p{margin:0}
+#spar-faq .spar-faq__answer a{color:inherit;text-decoration:underline}
+@media(max-width:767px){
+ #spar-faq{padding:16px 0 32px}
+ #spar-faq .spar-faq__title{font-size:clamp(28px,7.4vw,36px);line-height:1.15;letter-spacing:0;margin:0 16px 28px}
+ #spar-faq .spar-faq__list{width:calc(100% - 32px);gap:8px}
+ #spar-faq .spar-faq__item,#spar-faq .spar-faq__question{border-radius:22px}
+ #spar-faq .spar-faq__question{padding:20px 16px;gap:12px;font-size:18px;line-height:1.3;min-height:76px}
+ #spar-faq .spar-faq__icon{width:32px;height:32px;flex-basis:32px}
+ #spar-faq .spar-faq__answer{font-size:16px;line-height:1.5;padding:0 20px 22px}
+}
+@media(prefers-reduced-motion:reduce){#spar-faq .spar-faq__icon img{transition:none}}
+
+</style>
+<section id="spar-faq" aria-labelledby="spar-faq-title">
+  <h2 id="spar-faq-title" class="spar-faq__title">Вопрос-ответ</h2>
+  <div class="spar-faq__list">
+    <details class="spar-faq__item">
+      <summary class="spar-faq__question"><span>Какие общие сроки проведения акции?</span><span class="spar-faq__icon" aria-hidden="true"><img src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/faq/assets/874e9.svg" alt="" width="23" height="23"></span></summary>
+      <div class="spar-faq__answer"><p>Ответ скоро появится.</p></div>
+    </details>
+    <details class="spar-faq__item">
+      <summary class="spar-faq__question"><span>Чеки/ номер заказа за какой период покупки участвуют в акции?</span><span class="spar-faq__icon" aria-hidden="true"><img src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/faq/assets/874e9.svg" alt="" width="23" height="23"></span></summary>
+      <div class="spar-faq__answer"><p>Ответ скоро появится.</p></div>
+    </details>
+    <details class="spar-faq__item">
+      <summary class="spar-faq__question"><span>Откуда принимаются чеки/ номер заказа?</span><span class="spar-faq__icon" aria-hidden="true"><img src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/faq/assets/874e9.svg" alt="" width="23" height="23"></span></summary>
+      <div class="spar-faq__answer"><p>Ответ скоро появится.</p></div>
+    </details>
+    <details class="spar-faq__item">
+      <summary class="spar-faq__question"><span>Какая продукция участвует в акции?</span><span class="spar-faq__icon" aria-hidden="true"><img src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/faq/assets/874e9.svg" alt="" width="23" height="23"></span></summary>
+      <div class="spar-faq__answer"><p>Ответ скоро появится.</p></div>
+    </details>
+    <details class="spar-faq__item">
+      <summary class="spar-faq__question"><span>Что необходимо сделать для участия в акции?</span><span class="spar-faq__icon" aria-hidden="true"><img src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/faq/assets/874e9.svg" alt="" width="23" height="23"></span></summary>
+      <div class="spar-faq__answer"><p>Ответ скоро появится.</p></div>
+    </details>
+    <details class="spar-faq__item">
+      <summary class="spar-faq__question"><span>Что делать, если не получается зарегистрировать чек?</span><span class="spar-faq__icon" aria-hidden="true"><img src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/faq/assets/874e9.svg" alt="" width="23" height="23"></span></summary>
+      <div class="spar-faq__answer"><p>Ответ скоро появится.</p></div>
+    </details>
+  </div>
+</section>
