@@ -35,23 +35,26 @@
 #spar-entry .spar-entry__status:empty{display:none}
 @media(min-width:768px) and (max-width:1399px){
  #spar-entry .spar-entry__title{margin-bottom:60px}
- #spar-entry .spar-entry__form{width:700px;max-width:calc(100% - 64px);padding:28px}
- #spar-entry .spar-entry__stage{padding-bottom:311px}
- #spar-entry .spar-entry__cat{width:300px;height:311px;left:calc(50% - 250px);top:auto;bottom:0}
- #spar-entry .spar-entry__bird{width:180px;height:169px;left:calc(50% + 80px);top:auto;bottom:130px}
+ #spar-entry .spar-entry__form{width:54%;max-width:700px;padding:24px}
+ #spar-entry .spar-entry__stage{padding-bottom:0}
+ #spar-entry .spar-entry__cat{width:26vw;height:26.945vw;left:1%;top:auto;bottom:24px}
+ #spar-entry .spar-entry__bird{width:17vw;height:15.93vw;left:79%;top:-24px;bottom:auto}
  #spar-entry .spar-entry__input{font-size:16px;padding-left:12px}
+}
+@media(min-width:768px) and (max-width:999px){
+ #spar-entry .spar-entry__fields{grid-template-columns:minmax(0,1fr)}
 }
 @media(max-width:767px){
  #spar-entry{padding:40px 0 40px}
  #spar-entry .spar-entry__title{font-size:clamp(27px,7vw,36px);line-height:1.15;letter-spacing:0;margin:0 16px 28px}
  #spar-entry .spar-entry__title span{display:inline}
- #spar-entry .spar-entry__stage{padding-bottom:232px}
+ #spar-entry .spar-entry__stage{padding-top:164px;padding-bottom:0}
  #spar-entry .spar-entry__form{width:500px;max-width:calc(100% - 32px);border-radius:24px;padding:24px 20px;min-height:0}
  #spar-entry .spar-entry__heading{font-size:28px;line-height:1.2;margin-bottom:20px}
  #spar-entry .spar-entry__fields{grid-template-columns:minmax(0,1fr);gap:14px}
  #spar-entry .spar-entry__consents{margin:16px 0;gap:8px}
  #spar-entry .spar-entry__consent{font-size:13px;align-items:flex-start;padding:8px 0}
  #spar-entry .spar-entry__submit{width:100%;font-size:21px;min-height:56px;padding:12px}
- #spar-entry .spar-entry__cat{width:220px;height:228px;left:calc(50% - 150px);top:auto;bottom:0}
- #spar-entry .spar-entry__bird{width:120px;height:113px;left:calc(50% + 20px);top:auto;bottom:100px}
+ #spar-entry .spar-entry__cat{width:158px;height:164px;left:calc(50% - 142px);top:0;bottom:auto}
+ #spar-entry .spar-entry__bird{width:110px;height:103px;left:calc(50% + 30px);top:12px;bottom:auto}
 }
