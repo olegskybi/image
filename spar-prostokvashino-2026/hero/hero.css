@@ -18,7 +18,7 @@
  #spar-hero .spar-hero__title{font-size:clamp(36px,4.4vw,53px)}
  #spar-hero .spar-hero__button{margin-top:24px}
  #spar-hero .spar-hero__layout{min-height:380px}
- #spar-hero .spar-hero__art{top:auto;height:calc(100cqw * 571 / 1920)}
+ #spar-hero .spar-hero__art{top:auto;height:calc(100cqw * 571 / 1920);overflow:visible;transform:scale(1.4);transform-origin:82% 100%}
 }
 @media(max-width:767px){
  #spar-hero{--spar-canvas:800}
