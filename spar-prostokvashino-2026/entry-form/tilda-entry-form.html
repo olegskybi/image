@@ -1,0 +1,114 @@
+<!-- SPAR: демонстрационная форма без отправки. Отдельный T123. -->
+<style>
+@font-face{font-family:SparEntry;font-style:normal;font-weight:700;font-display:swap;src:url("https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/entry-form/assets/spar-bold.ttf") format("truetype")}
+#spar-entry{background:#0f7ed9;color:#004b99;padding:60px 0 64px;overflow:hidden;font-family:Arial,sans-serif;isolation:isolate;scroll-margin-top:24px}
+#spar-entry,#spar-entry *{box-sizing:border-box}
+#spar-entry .spar-entry__title{font:700 48px/58px SparEntry,Arial,sans-serif;letter-spacing:1px;color:#fff;text-align:center;margin:0 20px 92px}
+#spar-entry .spar-entry__title span{display:block}
+#spar-entry .spar-entry__stage{position:relative;max-width:1920px;margin:auto}
+#spar-entry .spar-entry__cat{position:absolute;left:calc(50% - 786px);top:-36px;width:440px;height:456px;overflow:hidden;pointer-events:none}
+#spar-entry .spar-entry__cat img{position:absolute;left:-.07%;top:0;width:177.55%;height:100%;max-width:none}
+#spar-entry .spar-entry__bird{position:absolute;left:calc(50% + 430px);top:-37px;width:286px;height:268px;overflow:hidden;pointer-events:none}
+#spar-entry .spar-entry__bird img{position:absolute;left:-216.7%;top:0;width:322.19%;height:201.12%;max-width:none}
+#spar-entry .spar-entry__form{position:relative;z-index:1;background:#99d1ff;width:820px;max-width:calc(100% - 48px);min-height:439px;border-radius:36px;padding:32px;margin:0 auto}
+#spar-entry .spar-entry__heading{font:700 34px/36.72px Arial,sans-serif;margin:0 0 18px}
+#spar-entry .spar-entry__fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#spar-entry .spar-entry__field{min-width:0}
+#spar-entry .spar-entry__label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#spar-entry .spar-entry__input{display:block;width:100%;height:56px;border:2px solid #0f7ed9;border-radius:18px;background:#fff;color:#353535;font:700 16px/1.2 Arial,sans-serif;padding:0 16px;min-width:0}
+#spar-entry .spar-entry__input::placeholder{color:#757575;opacity:1}
+#spar-entry select.spar-entry__input{padding-right:8px}
+#spar-entry .spar-entry__input:focus-visible{outline:3px solid #004b99;outline-offset:2px}
+#spar-entry .spar-entry__input[aria-invalid="true"]{border-color:#a3132c}
+#spar-entry .spar-entry__error{display:block;font:400 13px/1.35 Arial,sans-serif;color:#8b1230;margin:6px 4px 0}
+#spar-entry .spar-entry__error:empty{display:none}
+#spar-entry .spar-entry__consents{display:grid;gap:0;margin:8px 0 16px}
+#spar-entry .spar-entry__consent{display:flex;align-items:center;gap:10px;min-height:44px;font:700 13px/1.4 Arial,sans-serif;cursor:pointer}
+#spar-entry .spar-entry__checkbox{appearance:none;flex:none;width:22px;height:22px;border:2px solid #0f7ed9;border-radius:6px;background:#f7fdff;margin:0;display:grid;place-content:center;cursor:pointer}
+#spar-entry .spar-entry__checkbox:checked{background:#004b99;border-color:#004b99}
+#spar-entry .spar-entry__checkbox:checked::after{content:"✓";font:700 16px Arial,sans-serif;color:#fff}
+#spar-entry .spar-entry__checkbox:focus-visible{outline:3px solid #004b99;outline-offset:3px}
+#spar-entry .spar-entry__consent a{color:inherit;text-decoration:underline}
+#spar-entry .spar-entry__submit{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:38px;min-height:60px;width:372px;max-width:100%;padding:12px 20px;background:#004b99;color:#fff;font:700 24px/1.15 SparEntry,Arial,sans-serif;cursor:pointer}
+#spar-entry .spar-entry__submit:hover{background:#003d7e}
+#spar-entry .spar-entry__submit:focus-visible{outline:3px solid #004b99;outline-offset:4px}
+#spar-entry .spar-entry__demo{font:400 13px/1.4 Arial,sans-serif;margin:14px 0 0;max-width:620px}
+#spar-entry .spar-entry__status{font:700 15px/1.4 Arial,sans-serif;margin:14px 0 0}
+#spar-entry .spar-entry__status:empty{display:none}
+@media(min-width:768px) and (max-width:1399px){
+ #spar-entry .spar-entry__title{margin-bottom:60px}
+ #spar-entry .spar-entry__form{width:700px;max-width:calc(100% - 64px);padding:28px}
+ #spar-entry .spar-entry__stage{padding-bottom:311px}
+ #spar-entry .spar-entry__cat{width:300px;height:311px;left:calc(50% - 250px);top:auto;bottom:0}
+ #spar-entry .spar-entry__bird{width:180px;height:169px;left:calc(50% + 80px);top:auto;bottom:130px}
+ #spar-entry .spar-entry__input{font-size:16px;padding-left:12px}
+}
+@media(max-width:767px){
+ #spar-entry{padding:40px 0 40px}
+ #spar-entry .spar-entry__title{font-size:clamp(27px,7vw,36px);line-height:1.15;letter-spacing:0;margin:0 16px 28px}
+ #spar-entry .spar-entry__title span{display:inline}
+ #spar-entry .spar-entry__stage{padding-bottom:232px}
+ #spar-entry .spar-entry__form{width:500px;max-width:calc(100% - 32px);border-radius:24px;padding:24px 20px;min-height:0}
+ #spar-entry .spar-entry__heading{font-size:28px;line-height:1.2;margin-bottom:20px}
+ #spar-entry .spar-entry__fields{grid-template-columns:minmax(0,1fr);gap:14px}
+ #spar-entry .spar-entry__consents{margin:16px 0;gap:8px}
+ #spar-entry .spar-entry__consent{font-size:13px;align-items:flex-start;padding:8px 0}
+ #spar-entry .spar-entry__submit{width:100%;font-size:21px;min-height:56px;padding:12px}
+ #spar-entry .spar-entry__cat{width:220px;height:228px;left:calc(50% - 150px);top:auto;bottom:0}
+ #spar-entry .spar-entry__bird{width:120px;height:113px;left:calc(50% + 20px);top:auto;bottom:100px}
+}
+
+</style>
+<section id="spar-entry" aria-labelledby="spar-entry-title">
+  <h2 id="spar-entry-title" class="spar-entry__title"><span>Больше чеков – больше</span> <span>шансов на выигрыш!</span></h2>
+  <div class="spar-entry__stage">
+    <div class="spar-entry__cat" aria-hidden="true"><img src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/entry-form/assets/0e6ef.png" alt=""></div>
+    <div class="spar-entry__bird" aria-hidden="true"><img src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/entry-form/assets/0e6ef.png" alt=""></div>
+    <form id="spar-entry-form" class="spar-entry__form" aria-labelledby="spar-entry-heading" aria-describedby="spar-entry-demo" novalidate onsubmit="return false">
+      <h3 id="spar-entry-heading" class="spar-entry__heading">Форма участия</h3>
+      <div class="spar-entry__fields">
+      <div class="spar-entry__field"><label class="spar-entry__label" for="spar-entry-name">Фамилия и Имя</label><input id="spar-entry-name" class="spar-entry__input" name="name" type="text" placeholder="Фамилия и Имя" autocomplete="name" required maxlength="150" aria-describedby="spar-entry-name-error"><span id="spar-entry-name-error" class="spar-entry__error"></span></div>
+      <div class="spar-entry__field"><label class="spar-entry__label" for="spar-entry-phone">Телефон</label><input id="spar-entry-phone" class="spar-entry__input" name="phone" type="tel" placeholder="79XXXXXXXXX" autocomplete="tel" required maxlength="32" aria-describedby="spar-entry-phone-error"><span id="spar-entry-phone-error" class="spar-entry__error"></span></div>
+      <div class="spar-entry__field"><label class="spar-entry__label" for="spar-entry-email">E-mail</label><input id="spar-entry-email" class="spar-entry__input" name="email" type="email" placeholder="E-mail" autocomplete="email" required maxlength="150" aria-describedby="spar-entry-email-error"><span id="spar-entry-email-error" class="spar-entry__error"></span></div>
+        <div class="spar-entry__field"><label class="spar-entry__label" for="spar-entry-purchase">Способ покупки</label><select id="spar-entry-purchase" class="spar-entry__input" name="purchase" required aria-describedby="spar-entry-purchase-error"><option value="" selected disabled>Выберите способ покупки</option><option value="store">В магазине</option><option value="online">Онлайн-заказ</option></select><span id="spar-entry-purchase-error" class="spar-entry__error"></span></div>
+      </div>
+      <div class="spar-entry__consents">
+        <label class="spar-entry__consent"><input class="spar-entry__checkbox" type="checkbox" id="spar-entry-rules" name="rules" required aria-describedby="spar-entry-rules-error"><span>Согласен(а) с <a href="https://myspar.ru/info/pravila-provedeniya-reklamnoy-aktsii-nasladis-i-vyigryvay-prizy/" target="_blank" rel="noopener noreferrer">правилами акции</a></span></label><span id="spar-entry-rules-error" class="spar-entry__error"></span>
+        <label class="spar-entry__consent"><input class="spar-entry__checkbox" type="checkbox" id="spar-entry-privacy" name="privacy" required aria-describedby="spar-entry-privacy-error"><span>Согласен(а) с условиями обработки персональных данных</span></label><span id="spar-entry-privacy-error" class="spar-entry__error"></span>
+      </div>
+      <button type="submit" class="spar-entry__submit">Зарегистрироваться</button>
+      <p id="spar-entry-demo" class="spar-entry__demo">Демонстрационная форма: заявки пока не принимаются. Введённые данные не отправляются и не сохраняются.</p>
+      <p class="spar-entry__status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+<script>
+(() => {
+ const form=document.getElementById('spar-entry-form');
+ if(!form || form.dataset.initialized) return;
+ form.dataset.initialized='true';
+ const status=form.querySelector('.spar-entry__status');
+ const controls=Array.from(form.querySelectorAll('input,select'));
+ function validate(field){
+   let error='';
+   if(field.type==='checkbox') error=field.checked?'':'Подтвердите согласие для проверки формы.';
+   else if(!field.value.trim()) error=field.name==='purchase'?'Выберите способ покупки.':'Заполните это поле.';
+   else if(field.name==='name' && field.value.trim().split(/\s+/).length<2) error='Укажите фамилию и имя.';
+   else if(field.name==='phone' && !/^[78]\d{10}$/.test(field.value.replace(/[^\d]/g,''))) error='Укажите российский номер: 11 цифр, начиная с 7 или 8.';
+   else if(field.name==='email' && field.validity.typeMismatch) error='Укажите корректный e-mail.';
+   field.setAttribute('aria-invalid',String(Boolean(error)));
+   document.getElementById(field.id+'-error').textContent=error;
+   return !error;
+ }
+ for(const field of controls){
+   field.addEventListener('input',()=>{status.textContent='';if(field.getAttribute('aria-invalid')==='true')validate(field);});
+   field.addEventListener('change',()=>{status.textContent='';if(field.getAttribute('aria-invalid')==='true')validate(field);});
+ }
+ form.addEventListener('submit',event=>{
+   event.preventDefault();
+   const invalid=controls.filter(field=>!validate(field));
+   if(invalid.length){status.textContent='Проверьте отмеченные поля.';invalid[0].focus();return;}
+   status.textContent='Поля заполнены корректно. Заявка не отправлена: приём заявок пока не открыт.';
+ });
+})();
+</script>
