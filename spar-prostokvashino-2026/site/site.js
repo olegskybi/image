@@ -20,6 +20,7 @@
  };
  track.addEventListener('pointerup',finish);track.addEventListener('pointercancel',finish);track.addEventListener('lostpointercapture',finish);
  track.addEventListener('dragstart',event=>event.preventDefault());
+ track.querySelectorAll('img').forEach(image=>{image.draggable=false;});
  track.addEventListener('keydown',event=>{
   if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
   event.preventDefault();const current=Math.round(track.scrollLeft/step());
