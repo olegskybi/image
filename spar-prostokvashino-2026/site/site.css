@@ -461,3 +461,48 @@
  #spar-site #spar-entry .spar-entry__cat{width:26vw;height:26.945vw;left:1%;top:auto;bottom:24px}
  #spar-site #spar-entry .spar-entry__bird{width:17vw;height:15.93vw;left:79%;top:-24px}
 }
+
+#spar-hero .spar-scroll-motion{opacity:0;translate:0 16px;transition:opacity 300ms cubic-bezier(.23,1,.32,1),translate 300ms cubic-bezier(.23,1,.32,1)}
+#spar-hero .spar-scroll-motion.is-in-view,#spar-hero .spar-scroll-motion:focus-within{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){#spar-hero .spar-scroll-motion{translate:none;transition:opacity 150ms ease}}
+@media print{#spar-hero .spar-scroll-motion{opacity:1;translate:none}}
+
+#spar-participation .spar-scroll-motion{opacity:0;translate:0 16px;transition:opacity 300ms cubic-bezier(.23,1,.32,1),translate 300ms cubic-bezier(.23,1,.32,1)}
+#spar-participation .spar-scroll-motion.is-in-view,#spar-participation .spar-scroll-motion:focus-within{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){#spar-participation .spar-scroll-motion{translate:none;transition:opacity 150ms ease}}
+@media print{#spar-participation .spar-scroll-motion{opacity:1;translate:none}}
+
+#spar-prizes .spar-scroll-motion{opacity:0;translate:0 16px;transition:opacity 300ms cubic-bezier(.23,1,.32,1),translate 300ms cubic-bezier(.23,1,.32,1)}
+#spar-prizes .spar-scroll-motion.is-in-view,#spar-prizes .spar-scroll-motion:focus-within{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){#spar-prizes .spar-scroll-motion{translate:none;transition:opacity 150ms ease}}
+@media print{#spar-prizes .spar-scroll-motion{opacity:1;translate:none}}
+
+#spar-products .spar-scroll-motion{opacity:0;translate:0 16px;transition:opacity 300ms cubic-bezier(.23,1,.32,1),translate 300ms cubic-bezier(.23,1,.32,1)}
+#spar-products .spar-scroll-motion.is-in-view,#spar-products .spar-scroll-motion:focus-within{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){#spar-products .spar-scroll-motion{translate:none;transition:opacity 150ms ease}}
+@media print{#spar-products .spar-scroll-motion{opacity:1;translate:none}}
+
+#spar-entry .spar-scroll-motion{opacity:0;translate:0 16px;transition:opacity 300ms cubic-bezier(.23,1,.32,1),translate 300ms cubic-bezier(.23,1,.32,1)}
+#spar-entry .spar-scroll-motion.is-in-view,#spar-entry .spar-scroll-motion:focus-within{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){#spar-entry .spar-scroll-motion{translate:none;transition:opacity 150ms ease}}
+@media print{#spar-entry .spar-scroll-motion{opacity:1;translate:none}}
+
+#spar-winners .spar-scroll-motion{opacity:0;translate:0 16px;transition:opacity 300ms cubic-bezier(.23,1,.32,1),translate 300ms cubic-bezier(.23,1,.32,1)}
+#spar-winners .spar-scroll-motion.is-in-view,#spar-winners .spar-scroll-motion:focus-within{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){#spar-winners .spar-scroll-motion{translate:none;transition:opacity 150ms ease}}
+@media print{#spar-winners .spar-scroll-motion{opacity:1;translate:none}}
+
+#spar-faq .spar-scroll-motion{opacity:0;translate:0 16px;transition:opacity 300ms cubic-bezier(.23,1,.32,1),translate 300ms cubic-bezier(.23,1,.32,1)}
+#spar-faq .spar-scroll-motion.is-in-view,#spar-faq .spar-scroll-motion:focus-within{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){#spar-faq .spar-scroll-motion{translate:none;transition:opacity 150ms ease}}
+@media print{#spar-faq .spar-scroll-motion{opacity:1;translate:none}}
+
+#spar-question .spar-scroll-motion{opacity:0;translate:0 16px;transition:opacity 300ms cubic-bezier(.23,1,.32,1),translate 300ms cubic-bezier(.23,1,.32,1)}
+#spar-question .spar-scroll-motion.is-in-view,#spar-question .spar-scroll-motion:focus-within{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){#spar-question .spar-scroll-motion{translate:none;transition:opacity 150ms ease}}
+@media print{#spar-question .spar-scroll-motion{opacity:1;translate:none}}
+
+#spar-footer .spar-scroll-motion{opacity:0;translate:0 16px;transition:opacity 300ms cubic-bezier(.23,1,.32,1),translate 300ms cubic-bezier(.23,1,.32,1)}
+#spar-footer .spar-scroll-motion.is-in-view,#spar-footer .spar-scroll-motion:focus-within{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){#spar-footer .spar-scroll-motion{translate:none;transition:opacity 150ms ease}}
+@media print{#spar-footer .spar-scroll-motion{opacity:1;translate:none}}

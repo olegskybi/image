@@ -35,3 +35,10 @@
   </div>
   <div class="spar-footer__scenery" aria-hidden="true"><img class="spar-footer__fence" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/footer/assets/d87e0.png" alt="" width="2172" height="724" decoding="async"></div>
 </footer>
+<!-- SPAR repeat scroll motion -->
+<style>#spar-footer .spar-scroll-motion{opacity:0;translate:0 16px;transition:opacity 300ms cubic-bezier(.23,1,.32,1),translate 300ms cubic-bezier(.23,1,.32,1)}
+#spar-footer .spar-scroll-motion.is-in-view,#spar-footer .spar-scroll-motion:focus-within{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){#spar-footer .spar-scroll-motion{translate:none;transition:opacity 150ms ease}}
+@media print{#spar-footer .spar-scroll-motion{opacity:1;translate:none}}
+</style>
+<script>(()=>{const root=document.getElementById("spar-footer");if(!root||root.dataset.scrollMotion||!("IntersectionObserver" in window))return;root.dataset.scrollMotion="true";const observer=new IntersectionObserver(entries=>{for(const entry of entries){entry.target.classList.toggle("is-in-view",entry.isIntersecting||entry.target.contains(document.activeElement));}},{rootMargin:"-24px 0px -24px 0px",threshold:0});root.querySelectorAll(".spar-footer__conditions").forEach(element=>{element.classList.add("spar-scroll-motion");observer.observe(element);});})();</script>
