@@ -9,6 +9,19 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const edgeTolerance = 2;
   const cards = Array.from(track.children);
+  const dots = document.createElement('div');
+  dots.className = 'spar-products__dots';
+  dots.setAttribute('role','group');
+  dots.setAttribute('aria-label','Переключение товаров');
+  next.after(dots);
+  const dotButtons = cards.map((card,index) => {
+    const button = document.createElement('button');
+    button.type='button';button.className='spar-products__dot';
+    button.setAttribute('aria-label',`Показать товар ${index + 1} из ${cards.length}`);
+    button.setAttribute('aria-controls',track.id);
+    button.addEventListener('click',()=>track.scrollTo({left:index * stride(),behavior:reducedMotion.matches?'instant':'smooth'}));
+    dots.append(button);return button;
+  });
   const stride = () => cards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap);
   const update = () => {
     const maximum = track.scrollWidth - track.clientWidth;
@@ -16,6 +29,8 @@
     next.disabled = track.scrollLeft >= maximum - edgeTolerance;
     const first = Math.round(track.scrollLeft / stride()) + 1;
     const visible = Math.max(1, Math.round((track.clientWidth + parseFloat(getComputedStyle(track).columnGap)) / stride()));
+    dots.hidden = maximum <= edgeTolerance;
+    dotButtons.forEach((button,index)=>button.setAttribute('aria-pressed',String(index >= first - 1 && index < first - 1 + visible)));
     status.textContent = `Товары ${first}–${Math.min(cards.length, first + visible - 1)} из ${cards.length}`;
   };
   const move = direction => track.scrollBy({left: direction * stride(), behavior: reducedMotion.matches ? 'instant' : 'smooth'});
@@ -28,8 +43,7 @@
       event.preventDefault(); track.scrollTo({left:event.key === 'Home' ? 0 : track.scrollWidth,behavior:reducedMotion.matches ? 'instant' : 'smooth'});
     }
   });
-  let scrollTimer;
-  track.addEventListener('scroll', () => {clearTimeout(scrollTimer);scrollTimer = setTimeout(update, 100);}, {passive:true});
+  track.addEventListener('scroll', update, {passive:true});
   new ResizeObserver(update).observe(track);
   update();
 })();

@@ -38,3 +38,11 @@
  #spar-products .spar-products__catalog{min-height:52px;max-width:100%}
 }
 @media(prefers-reduced-motion:reduce){#spar-products .spar-products__catalog{transition:none}}
+
+#spar-products .spar-products__dots{display:flex;align-items:center;justify-content:center;grid-column:2;grid-row:2;gap:0;min-width:0}
+#spar-products .spar-products__dots[hidden]{display:none}
+#spar-products .spar-products__dot{display:grid;place-items:center;width:32px;height:44px;flex:0 0 32px;padding:0;border:0;background:transparent;cursor:pointer;border-radius:12px}
+#spar-products .spar-products__dot::before{content:"";width:10px;height:10px;border:2px solid #0f7ed9;border-radius:50%;background:transparent;transform:scale(.85);transition:background-color .22s ease,transform .22s ease}
+#spar-products .spar-products__dot[aria-pressed="true"]::before{background:#0f7ed9;transform:scale(1)}
+#spar-products .spar-products__dot:focus-visible{outline:2px solid #004b99;outline-offset:0}
+@media(prefers-reduced-motion:reduce){#spar-products .spar-products__dot::before{transition:none}}
