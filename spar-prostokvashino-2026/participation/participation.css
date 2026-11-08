@@ -34,3 +34,12 @@
  #spar-participation .spar-step__description{font-size:18px;line-height:1.1}
  #spar-participation .spar-step__description--prizes{font-size:17px}
 }
+
+#spar-participation .spar-steps__list:focus-visible{outline:3px solid #fff;outline-offset:-3px}
+@media(max-width:767px){
+ #spar-participation{padding-bottom:24px}
+ #spar-participation .spar-steps__list{display:flex;width:100%;max-width:none;gap:64px;margin:0;padding:0 100px 64px 24px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-left:24px;scrollbar-width:none;cursor:grab;user-select:none;-webkit-user-select:none}
+ #spar-participation .spar-steps__list::-webkit-scrollbar{display:none}
+ #spar-participation .spar-step{flex:0 0 min(280px,72vw);scroll-snap-align:start;scroll-snap-stop:always}
+ #spar-participation .spar-steps__list.is-dragging{cursor:grabbing;scroll-snap-type:none}
+}
