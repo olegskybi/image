@@ -1,0 +1,72 @@
+<!-- SPAR: Как принять участие. Вставить целиком в отдельный блок T123 после главного экрана. -->
+<style>
+@font-face{font-family:SparSteps;font-style:normal;font-weight:400;font-display:swap;src:url("https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/participation/assets/spar-normal.ttf") format("truetype")}
+@font-face{font-family:SparSteps;font-style:normal;font-weight:700;font-display:swap;src:url("https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/participation/assets/spar-bold.ttf") format("truetype")}
+#spar-participation{--step-blue:#0063b4;--step-ink:#004b99;background:var(--step-blue);color:#353535;font-family:SparSteps,Arial,sans-serif;padding:50px 0 76px;overflow:hidden;isolation:isolate}
+#spar-participation,#spar-participation *{box-sizing:border-box}
+#spar-participation .spar-steps__title{margin:0 24px 26px;color:#fff;text-align:center;font-family:inherit;font-weight:700;font-size:48px;line-height:58px;letter-spacing:1px}
+#spar-participation .spar-steps__list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:52px;max-width:924px;width:calc(100% - 96px);margin:0 auto;padding:0;list-style:none}
+#spar-participation .spar-step{position:relative;aspect-ratio:270/262;container-type:inline-size;min-width:0}
+#spar-participation .spar-step__surface{position:absolute;inset:0;display:block;width:100%;height:auto;pointer-events:none}
+#spar-participation .spar-step__text{position:relative;z-index:1;padding:11px 20px 0}
+#spar-participation .spar-step__number{display:block;color:var(--step-ink);font-weight:700;font-size:42.5px;line-height:65.875px}
+#spar-participation .spar-step__heading{font:700 24px/1 SparSteps,Arial,sans-serif;letter-spacing:-.48px;margin:0 0 3px}
+#spar-participation .spar-step__description{font:italic 20px/1.04 Arial,sans-serif;letter-spacing:-.309px;margin:0;color:#423452}
+#spar-participation .spar-step__description--prizes{font-size:18px}
+#spar-participation .spar-step__art{position:absolute;display:block;height:auto;pointer-events:none;max-width:none;filter:drop-shadow(2px 3px 5px rgb(0 0 0 / .12))}
+#spar-participation .spar-step__milk{left:89.604%;top:59.45%;width:34.074%;transform:translate(-50%,-50%) rotate(4.5deg)}
+#spar-participation .spar-step__cream{left:57.874%;top:85.214%;width:52.222%;transform:translate(-50%,-50%) rotate(-9.59deg)}
+#spar-participation .spar-step__receipt{left:36.667%;top:29.389%;width:91.111%}
+#spar-participation .spar-step__bonus{left:73.048%;top:81.447%;width:96.218%;transform:translate(-50%,-50%) rotate(-53.2deg) skewX(-.09deg);filter:none}
+@media(min-width:768px) and (max-width:1023px){
+ #spar-participation .spar-steps__list{gap:32px;width:calc(100% - 80px)}
+ #spar-participation .spar-step__text{padding:8px 16px 0}
+ #spar-participation .spar-step__number{font-size:36px;line-height:54px}
+ #spar-participation .spar-step__heading{font-size:20px}
+ #spar-participation .spar-step__description{font-size:16px}
+ #spar-participation .spar-step__description--prizes{font-size:15px}
+}
+@media(max-width:767px){
+ #spar-participation{padding:40px 0 72px}
+ #spar-participation .spar-steps__title{font-size:clamp(28px,7.4vw,36px);line-height:1.15;letter-spacing:0;margin:0 20px 32px}
+ #spar-participation .spar-steps__list{grid-template-columns:minmax(0,1fr);gap:64px;width:calc(100% - 80px);max-width:320px}
+ #spar-participation .spar-step__text{padding:12px 20px 0}
+ #spar-participation .spar-step__number{font-size:42px;line-height:62px}
+ #spar-participation .spar-step__heading{font-size:24px}
+ #spar-participation .spar-step__description{font-size:18px;line-height:1.1}
+ #spar-participation .spar-step__description--prizes{font-size:17px}
+}
+
+</style>
+<section id="spar-participation" aria-labelledby="spar-participation-title">
+  <h2 id="spar-participation-title" class="spar-steps__title">Как принять участие?</h2>
+  <ol class="spar-steps__list" role="list">
+    <li class="spar-step spar-step--purchase">
+      <img class="spar-step__surface" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/participation/assets/838d0.svg" alt="" aria-hidden="true">
+      <div class="spar-step__text">
+        <span class="spar-step__number" aria-hidden="true">01</span>
+        <h3 class="spar-step__heading">Покупайте</h3>
+        <p class="spar-step__description">От 1 товара<br>из подборки</p>
+      </div>
+      <img class="spar-step__art spar-step__milk" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/participation/assets/8642b.png" alt="" width="92" height="231"><img class="spar-step__art spar-step__cream" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/participation/assets/bebcb.png" alt="" width="141" height="141">
+    </li>
+    <li class="spar-step spar-step--registration">
+      <img class="spar-step__surface" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/participation/assets/838d0.svg" alt="" aria-hidden="true">
+      <div class="spar-step__text">
+        <span class="spar-step__number" aria-hidden="true">02</span>
+        <h3 class="spar-step__heading">Регистрируйте</h3>
+        <p class="spar-step__description">Чеки на сайте</p>
+      </div>
+      <img class="spar-step__art spar-step__receipt" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/participation/assets/2cc7c.png" alt="" width="246" height="246">
+    </li>
+    <li class="spar-step spar-step--prizes">
+      <img class="spar-step__surface" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/participation/assets/838d0.svg" alt="" aria-hidden="true">
+      <div class="spar-step__text">
+        <span class="spar-step__number" aria-hidden="true">03</span>
+        <h3 class="spar-step__heading">Участвуйте</h3>
+        <p class="spar-step__description spar-step__description--prizes">В розыгрыше призов</p>
+      </div>
+      <img class="spar-step__art spar-step__bonus" src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/participation/assets/41451.svg" alt="">
+    </li>
+  </ol>
+</section>

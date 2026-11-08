@@ -1,0 +1,46 @@
+{
+  "figmaFile": "konvmvXiM0ACaO4ExAD5Q4",
+  "nodes": [
+    "79:336",
+    "79:376"
+  ],
+  "assets": [
+    {
+      "file": "838d0.svg",
+      "nodes": [
+        "79:340",
+        "79:347",
+        "79:354"
+      ],
+      "slot": "card background"
+    },
+    {
+      "file": "8642b.png",
+      "nodes": [
+        "79:373"
+      ],
+      "slot": "milk"
+    },
+    {
+      "file": "bebcb.png",
+      "nodes": [
+        "79:374"
+      ],
+      "slot": "sour cream"
+    },
+    {
+      "file": "2cc7c.png",
+      "nodes": [
+        "79:375"
+      ],
+      "slot": "receipt"
+    },
+    {
+      "file": "41451.svg",
+      "nodes": [
+        "79:360"
+      ],
+      "slot": "SPAR bonus ticket"
+    }
+  ]
+}
