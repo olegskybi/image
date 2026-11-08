@@ -1,0 +1,35 @@
+{
+  "figmaFile": "konvmvXiM0ACaO4ExAD5Q4",
+  "node": "79:458",
+  "assets": [
+    {
+      "file": "9efa9.png",
+      "nodes": [
+        "79:486",
+        "79:489"
+      ],
+      "slot": "Matroskin with prize tickets"
+    },
+    {
+      "file": "ce3f9.svg",
+      "nodes": [
+        "79:487"
+      ],
+      "slot": "illustration mask"
+    },
+    {
+      "file": "06c67.svg",
+      "nodes": [
+        "79:468"
+      ],
+      "slot": "tax notice"
+    },
+    {
+      "file": "15d8e.svg",
+      "nodes": [
+        "79:496"
+      ],
+      "slot": "top curve"
+    }
+  ]
+}

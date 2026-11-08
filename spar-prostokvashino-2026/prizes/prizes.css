@@ -1,0 +1,54 @@
+@font-face{font-family:SparPrizes;font-style:normal;font-weight:400;font-display:swap;src:url("assets/spar-normal.ttf") format("truetype")}
+@font-face{font-family:SparPrizes;font-style:normal;font-weight:700;font-display:swap;src:url("assets/spar-bold.ttf") format("truetype")}
+#spar-prizes{position:relative;isolation:isolate;overflow:hidden;background:#0f7ed9;color:#004b99;font-family:SparPrizes,Arial,sans-serif;padding:44px 0 42px}
+#spar-prizes,#spar-prizes *{box-sizing:border-box}
+#spar-prizes .spar-prizes__wave{position:absolute;z-index:-1;left:50%;top:-73px;transform:translateX(-50%);width:1962px;height:140px;max-width:none;pointer-events:none}
+#spar-prizes .spar-prizes__header{position:relative;text-align:center;margin:0 20px 55px}
+#spar-prizes .spar-prizes__title{font:700 48px/58px SparPrizes,Arial,sans-serif;letter-spacing:1px;color:#fff;margin:0}
+#spar-prizes .spar-prizes__note{display:block;width:356px;max-width:100%;height:auto;margin:0 auto}
+#spar-prizes .spar-prizes__panel{position:relative;width:calc(100% - 96px);max-width:1194px;min-height:369px;margin:0 auto;background:#b3ddff;border-radius:32px}
+#spar-prizes .spar-prizes__copy{position:relative;z-index:2;width:553px;max-width:51%;padding:23px 0 28px;margin-left:5.8626%}
+#spar-prizes .spar-prizes__subtitle{font:700 clamp(32px,3vw,48px)/1.2083 SparPrizes,Arial,sans-serif;letter-spacing:1px;margin:0 0 4px;white-space:nowrap}
+#spar-prizes .spar-prizes__description{font:400 20px/1.2 SparPrizes,Arial,sans-serif;letter-spacing:1px;margin:0 0 24px}
+#spar-prizes .spar-prizes__list{display:grid;gap:19px;width:386px;max-width:100%;padding:0;margin:0;list-style:none}
+#spar-prizes .spar-prizes__item{display:flex;align-items:center;gap:10px;background:#fff;border-radius:32px;padding:10px 20px;min-height:57px}
+#spar-prizes .spar-prizes__count{flex:none;background:#0f7ed9;color:#fff;border-radius:32px;padding:0 12px;font-size:20px;line-height:36.72px;white-space:nowrap}
+#spar-prizes .spar-prizes__amount{font-size:34px;line-height:36.72px;font-weight:700;white-space:nowrap}
+#spar-prizes .spar-prizes__clip{position:absolute;inset:0;border-radius:inherit;overflow:hidden;pointer-events:none}
+#spar-prizes .spar-prizes__base-cat{position:absolute;left:47.4874%;top:-14.6341%;width:51.3400%;height:auto;max-width:none}
+#spar-prizes .spar-prizes__art{position:absolute;z-index:1;left:44.768%;top:-12.8076%;width:55.4258%;aspect-ratio:661.784/442.257;mask-image:url("assets/ce3f9.svg");mask-size:100% 100%;mask-repeat:no-repeat;pointer-events:none}
+#spar-prizes .spar-prizes__cat{position:absolute;left:4.6692%;top:-1.4453%;width:92.9042%;height:auto;max-width:none}
+#spar-prizes .spar-prizes__footer{text-align:center;margin-top:45px}
+#spar-prizes .spar-prizes__rules{display:inline-flex;align-items:center;justify-content:center;min-height:55px;min-width:237px;padding:12px 24px;border:1px solid #fff;border-radius:12px;color:#fff!important;text-decoration:none!important;font:700 16px/1.55 SparPrizes,Arial,sans-serif;transition:background-color .18s ease}
+#spar-prizes .spar-prizes__rules:hover{background:#004b99}
+#spar-prizes .spar-prizes__rules:focus-visible{outline:3px solid #fff;outline-offset:5px}
+@media(min-width:768px) and (max-width:1199px){
+ #spar-prizes .spar-prizes__panel{width:calc(100% - 64px)}
+ #spar-prizes .spar-prizes__copy{margin-left:32px;max-width:54%;padding-top:28px}
+ #spar-prizes .spar-prizes__subtitle{font-size:30px;letter-spacing:0;white-space:normal}
+ #spar-prizes .spar-prizes__description{font-size:17px;letter-spacing:0;max-width:330px}
+ #spar-prizes .spar-prizes__list{width:330px;gap:16px}
+ #spar-prizes .spar-prizes__item{padding:9px 14px;gap:8px}
+ #spar-prizes .spar-prizes__amount{font-size:27px}
+ #spar-prizes .spar-prizes__count{font-size:17px;padding:0 10px}
+ #spar-prizes .spar-prizes__art{top:auto;bottom:-18px;left:49%;width:51%}
+ #spar-prizes .spar-prizes__base-cat{display:none}
+}
+@media(max-width:767px){
+ #spar-prizes{padding:40px 0 40px}
+ #spar-prizes .spar-prizes__wave{top:-112px}
+ #spar-prizes .spar-prizes__header{margin:0 16px 28px}
+ #spar-prizes .spar-prizes__title{font-size:clamp(28px,7.4vw,36px);line-height:1.15;letter-spacing:0;margin-bottom:10px}
+ #spar-prizes .spar-prizes__panel{width:calc(100% - 32px);max-width:500px;border-radius:24px;min-height:0}
+ #spar-prizes .spar-prizes__copy{width:auto;max-width:none;padding:24px 16px 0;margin:0}
+ #spar-prizes .spar-prizes__subtitle{font-size:clamp(24px,6vw,30px);line-height:1.15;letter-spacing:0;white-space:normal;text-align:center;margin-bottom:8px}
+ #spar-prizes .spar-prizes__description{font-size:16px;line-height:1.35;letter-spacing:0;text-align:center;margin-bottom:24px}
+ #spar-prizes .spar-prizes__list{width:100%;max-width:386px;margin:0 auto;gap:12px}
+ #spar-prizes .spar-prizes__item{padding:8px 12px;gap:8px;min-height:52px}
+ #spar-prizes .spar-prizes__count{font-size:16px;line-height:32px;padding:0 10px}
+ #spar-prizes .spar-prizes__amount{font-size:clamp(22px,5.6vw,30px);line-height:1.2}
+ #spar-prizes .spar-prizes__clip{display:none}
+ #spar-prizes .spar-prizes__art{position:relative;left:auto;top:auto;width:100%;margin:20px auto -12px}
+ #spar-prizes .spar-prizes__footer{margin-top:36px}
+}
+@media(prefers-reduced-motion:reduce){#spar-prizes .spar-prizes__rules{transition:none}}
