@@ -286,7 +286,7 @@
 #spar-entry .spar-entry__label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 #spar-entry .spar-entry__input{display:block;width:100%;height:56px;border:2px solid #0f7ed9;border-radius:18px;background:#fff;color:#353535;font:700 16px/1.2 Arial,sans-serif;padding:0 16px;min-width:0}
 #spar-entry .spar-entry__input::placeholder{color:#757575;opacity:1}
-#spar-entry select.spar-entry__input{padding-right:8px}
+#spar-entry select.spar-entry__input{appearance:none;-webkit-appearance:none;padding-right:48px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='m6 9 6 6 6-6' stroke='%23004b99' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center;background-size:20px 20px;cursor:pointer}
 #spar-entry .spar-entry__input:focus-visible{outline:3px solid #004b99;outline-offset:2px}
 #spar-entry .spar-entry__input[aria-invalid="true"]{border-color:#a3132c}
 #spar-entry .spar-entry__error{display:block;font:400 13px/1.35 Arial,sans-serif;color:#8b1230;margin:6px 4px 0}
@@ -301,7 +301,6 @@
 #spar-entry .spar-entry__submit{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:38px;min-height:60px;width:372px;max-width:100%;padding:12px 20px;background:#004b99;color:#fff;font:700 24px/1.15 SparSite,Arial,sans-serif;cursor:pointer}
 #spar-entry .spar-entry__submit:hover{background:#003d7e}
 #spar-entry .spar-entry__submit:focus-visible{outline:3px solid #004b99;outline-offset:4px}
-#spar-entry .spar-entry__demo{font:400 13px/1.4 Arial,sans-serif;margin:14px 0 0;max-width:620px}
 #spar-entry .spar-entry__status{font:700 15px/1.4 Arial,sans-serif;margin:14px 0 0}
 #spar-entry .spar-entry__status:empty{display:none}
 @media(min-width:768px) and (max-width:1399px){
@@ -778,7 +777,7 @@
   <div class="spar-entry__stage">
     <div class="spar-entry__cat" aria-hidden="true"><img src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/entry-form/assets/0e6ef.png" alt=""></div>
     <div class="spar-entry__bird" aria-hidden="true"><img src="https://raw.githubusercontent.com/olegskybi/image/main/spar-prostokvashino-2026/entry-form/assets/0e6ef.png" alt=""></div>
-    <form id="spar-entry-form" class="spar-entry__form" aria-labelledby="spar-entry-heading" aria-describedby="spar-entry-demo" novalidate onsubmit="return false">
+    <form id="spar-entry-form" class="spar-entry__form" aria-labelledby="spar-entry-heading" novalidate onsubmit="return false">
       <h3 id="spar-entry-heading" class="spar-entry__heading">Форма участия</h3>
       <div class="spar-entry__fields">
       <div class="spar-entry__field"><label class="spar-entry__label" for="spar-entry-name">Фамилия и Имя</label><input id="spar-entry-name" class="spar-entry__input" name="name" type="text" placeholder="Фамилия и Имя" autocomplete="name" required maxlength="150" aria-describedby="spar-entry-name-error"><span id="spar-entry-name-error" class="spar-entry__error"></span></div>
@@ -806,7 +805,6 @@
         <label class="spar-entry__consent"><input class="spar-entry__checkbox" type="checkbox" id="spar-entry-privacy" name="privacy" required aria-describedby="spar-entry-privacy-error"><span>Согласен(а) с условиями обработки персональных данных</span></label><span id="spar-entry-privacy-error" class="spar-entry__error"></span>
       </div>
       <button type="submit" class="spar-entry__submit">Зарегистрироваться</button>
-      <p id="spar-entry-demo" class="spar-entry__demo">Демонстрационная форма: заявки пока не принимаются. Данные и выбранный файл не отправляются и не сохраняются на сервере.</p>
       <p class="spar-entry__status" role="status" aria-live="polite"></p>
     </form>
   </div>
