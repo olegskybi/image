@@ -7,16 +7,31 @@
       <h3 id="spar-entry-heading" class="spar-entry__heading">Форма участия</h3>
       <div class="spar-entry__fields">
       <div class="spar-entry__field"><label class="spar-entry__label" for="spar-entry-name">Фамилия и Имя</label><input id="spar-entry-name" class="spar-entry__input" name="name" type="text" placeholder="Фамилия и Имя" autocomplete="name" required maxlength="150" aria-describedby="spar-entry-name-error"><span id="spar-entry-name-error" class="spar-entry__error"></span></div>
-      <div class="spar-entry__field"><label class="spar-entry__label" for="spar-entry-phone">Телефон</label><input id="spar-entry-phone" class="spar-entry__input" name="phone" type="tel" placeholder="79XXXXXXXXX" autocomplete="tel" required maxlength="32" aria-describedby="spar-entry-phone-error"><span id="spar-entry-phone-error" class="spar-entry__error"></span></div>
+      <div class="spar-entry__field"><label class="spar-entry__label" for="spar-entry-phone">Телефон</label><input id="spar-entry-phone" class="spar-entry__input" name="phone" type="tel" placeholder="+7 (000) 000-00-00" autocomplete="tel" required maxlength="32" aria-describedby="spar-entry-phone-error"><span id="spar-entry-phone-error" class="spar-entry__error"></span></div>
       <div class="spar-entry__field"><label class="spar-entry__label" for="spar-entry-email">E-mail</label><input id="spar-entry-email" class="spar-entry__input" name="email" type="email" placeholder="E-mail" autocomplete="email" required maxlength="150" aria-describedby="spar-entry-email-error"><span id="spar-entry-email-error" class="spar-entry__error"></span></div>
         <div class="spar-entry__field"><label class="spar-entry__label" for="spar-entry-purchase">Способ покупки</label><select id="spar-entry-purchase" class="spar-entry__input" name="purchase" required aria-describedby="spar-entry-purchase-error"><option value="" selected disabled>Выберите способ покупки</option><option value="store">В магазине</option><option value="online">Онлайн-заказ</option></select><span id="spar-entry-purchase-error" class="spar-entry__error"></span></div>
       </div>
+      <fieldset class="spar-entry__branch" data-purchase="store" hidden disabled>
+        <legend class="spar-entry__branch-title">Покупка в магазине</legend>
+        <div class="spar-entry__fields">
+          <div class="spar-entry__field"><label class="spar-entry__visible-label" for="spar-entry-date">Дата покупки из чека</label><input id="spar-entry-date" class="spar-entry__input" name="receiptDate" type="date" required aria-describedby="spar-entry-date-error"><span id="spar-entry-date-error" class="spar-entry__error"></span></div>
+          <div class="spar-entry__field"><label class="spar-entry__visible-label" for="spar-entry-time">Время покупки из чека</label><input id="spar-entry-time" class="spar-entry__input" name="receiptTime" type="time" required aria-describedby="spar-entry-time-error"><span id="spar-entry-time-error" class="spar-entry__error"></span></div>
+        </div>
+        <p id="spar-entry-receipt-hint" class="spar-entry__upload-hint">Для проверки достаточно загрузить фото или скриншот QR-кода чека. Если на фото или скриншоте не будет QR-кода, чек может не принять участия в акции.</p>
+        <label class="spar-entry__visible-label" for="spar-entry-receipt">Фото или скриншот QR-кода чека</label>
+        <input id="spar-entry-receipt" class="spar-entry__file" name="receipt" type="file" accept="image/*" required aria-describedby="spar-entry-receipt-hint spar-entry-receipt-error">
+        <span id="spar-entry-receipt-error" class="spar-entry__error"></span>
+      </fieldset>
+      <fieldset class="spar-entry__branch" data-purchase="online" hidden disabled>
+        <legend class="spar-entry__branch-title">Онлайн-заказ</legend>
+        <div class="spar-entry__field"><label class="spar-entry__visible-label" for="spar-entry-order">Номер заказа</label><input id="spar-entry-order" class="spar-entry__input" name="orderNumber" type="text" placeholder="Номер заказа" maxlength="100" required aria-describedby="spar-entry-order-error"><span id="spar-entry-order-error" class="spar-entry__error"></span></div>
+      </fieldset>
       <div class="spar-entry__consents">
         <label class="spar-entry__consent"><input class="spar-entry__checkbox" type="checkbox" id="spar-entry-rules" name="rules" required aria-describedby="spar-entry-rules-error"><span>Согласен(а) с <a href="https://myspar.ru/info/pravila-provedeniya-reklamnoy-aktsii-nasladis-i-vyigryvay-prizy/" target="_blank" rel="noopener noreferrer">правилами акции</a></span></label><span id="spar-entry-rules-error" class="spar-entry__error"></span>
         <label class="spar-entry__consent"><input class="spar-entry__checkbox" type="checkbox" id="spar-entry-privacy" name="privacy" required aria-describedby="spar-entry-privacy-error"><span>Согласен(а) с условиями обработки персональных данных</span></label><span id="spar-entry-privacy-error" class="spar-entry__error"></span>
       </div>
       <button type="submit" class="spar-entry__submit">Зарегистрироваться</button>
-      <p id="spar-entry-demo" class="spar-entry__demo">Демонстрационная форма: заявки пока не принимаются. Введённые данные не отправляются и не сохраняются.</p>
+      <p id="spar-entry-demo" class="spar-entry__demo">Демонстрационная форма: заявки пока не принимаются. Данные и выбранный файл не отправляются и не сохраняются на сервере.</p>
       <p class="spar-entry__status" role="status" aria-live="polite"></p>
     </form>
   </div>

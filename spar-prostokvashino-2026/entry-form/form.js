@@ -4,12 +4,31 @@
  form.dataset.initialized='true';
  const status=form.querySelector('.spar-entry__status');
  const controls=Array.from(form.querySelectorAll('input,select'));
+ const purchase=form.querySelector('[name="purchase"]');
+ const branches=Array.from(form.querySelectorAll('[data-purchase]'));
+ function updateBranch(){
+   branches.forEach(branch=>{
+     const active=branch.dataset.purchase===purchase.value;
+     branch.hidden=!active;branch.disabled=!active;
+     branch.querySelectorAll('input').forEach(field=>{field.removeAttribute('aria-invalid');document.getElementById(field.id+'-error').textContent='';});
+   });
+   status.textContent='';
+ }
+ purchase.addEventListener('change',updateBranch);
+ updateBranch();
  function validate(field){
    let error='';
-   if(field.type==='checkbox') error=field.checked?'':'Подтвердите согласие для проверки формы.';
+   if(field.matches(':disabled'))return true;
+   if(field.type==='file'){
+     const file=field.files[0];
+     if(!file)error='Выберите фото или скриншот QR-кода чека.';
+     else if(file.type && !file.type.startsWith('image/'))error='Выберите файл изображения.';
+   }
+   else if(field.type==='checkbox') error=field.checked?'':'Подтвердите согласие для проверки формы.';
    else if(!field.value.trim()) error=field.name==='purchase'?'Выберите способ покупки.':'Заполните это поле.';
    else if(field.name==='name' && field.value.trim().split(/\s+/).length<2) error='Укажите фамилию и имя.';
    else if(field.name==='phone' && !/^[78]\d{10}$/.test(field.value.replace(/[^\d]/g,''))) error='Укажите российский номер: 11 цифр, начиная с 7 или 8.';
+   else if(['date','time'].includes(field.type) && !field.validity.valid)error='Укажите корректные дату и время из чека.';
    else if(field.name==='email' && field.validity.typeMismatch) error='Укажите корректный e-mail.';
    field.setAttribute('aria-invalid',String(Boolean(error)));
    document.getElementById(field.id+'-error').textContent=error;
