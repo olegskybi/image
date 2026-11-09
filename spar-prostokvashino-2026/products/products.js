@@ -31,6 +31,8 @@
     const visible = Math.max(1, Math.round((track.clientWidth + parseFloat(getComputedStyle(track).columnGap)) / stride()));
     dots.hidden = maximum <= edgeTolerance;
     dotButtons.forEach((button,index)=>button.setAttribute('aria-pressed',String(index >= first - 1 && index < first - 1 + visible)));
+    const activeDot=dotButtons[first-1];
+    if(activeDot){const offset=activeDot.offsetLeft-dots.offsetLeft;dots.scrollTo({left:Math.max(0,offset-dots.clientWidth/2+activeDot.clientWidth/2),behavior:reducedMotion.matches?'instant':'smooth'});}
     status.textContent = `Товары ${first}–${Math.min(cards.length, first + visible - 1)} из ${cards.length}`;
   };
   const move = direction => track.scrollBy({left: direction * stride(), behavior: reducedMotion.matches ? 'instant' : 'smooth'});

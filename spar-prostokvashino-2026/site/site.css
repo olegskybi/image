@@ -263,6 +263,11 @@
 #spar-products .spar-products__dot:focus-visible{outline:2px solid #004b99;outline-offset:0}
 @media(prefers-reduced-motion:reduce){#spar-products .spar-products__dot::before{transition:none}}
 
+#spar-products .spar-product{min-height:0;padding:0;background:transparent;align-self:flex-start}
+#spar-products .spar-product__image{aspect-ratio:508/776;object-fit:contain;width:100%;height:auto}
+#spar-products .spar-products__dots{justify-content:flex-start;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;max-width:100%}
+#spar-products .spar-products__dots::-webkit-scrollbar{display:none}
+
 
 #spar-entry{background:#0f7ed9;color:#004b99;padding:60px 0 64px;overflow:hidden;font-family:Arial,sans-serif;isolation:isolate;scroll-margin-top:24px}
 #spar-entry,#spar-entry *{box-sizing:border-box}
